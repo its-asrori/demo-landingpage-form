@@ -1,914 +1,1768 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html lang="id"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
-<meta content="mobile_tab" name="shell-type"/>
-<title>Citra Griya Panjen — A Sanctuary in Malang</title>
-<!-- Editorial Google Fonts: Newsreader (Editorial Serif) & Plus Jakarta Sans (Clean Minimalist Sans) -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..500,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "background": "#F9F8F5",
-            "canvas": "#FBF9F5",
-            "surface-pure": "#FFFFFF",
-            "stone-sand": "#F3EFEA",
-            "stone-border": "#E6E2DC",
-            "pine": "#173627",
-            "pine-dark": "#0F261B",
-            "pine-muted": "#2A4E3C",
-            "ochre": "#A26848",
-            "ochre-soft": "#F4EBE4",
-            "charcoal": "#1A1C19",
-            "stone-grey": "#5C6059",
-            "stone-light": "#8C9087"
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="mobile_tab" name="shell-type" />
+    <title>Citra Griya Panjen — Jombang</title>
+    <!-- Editorial Google Fonts: Newsreader (Editorial Serif) & Plus Jakarta Sans (Clean Minimalist Sans) -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..500,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              background: "#F9F8F5",
+              canvas: "#FBF9F5",
+              "surface-pure": "#FFFFFF",
+              "stone-sand": "#F3EFEA",
+              "stone-border": "#E6E2DC",
+              pine: "#173627",
+              "pine-dark": "#0F261B",
+              "pine-muted": "#2A4E3C",
+              ochre: "#A26848",
+              "ochre-soft": "#F4EBE4",
+              charcoal: "#1A1C19",
+              "stone-grey": "#5C6059",
+              "stone-light": "#8C9087",
+            },
+            fontFamily: {
+              serif: ["Newsreader", "serif"],
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            spacing: {
+              margin: "1.25rem",
+            },
           },
-          fontFamily: {
-            serif: ["Newsreader", "serif"],
-            sans: ["Plus Jakarta Sans", "sans-serif"]
-          },
-          spacing: {
-            margin: "1.25rem"
-          }
+        },
+      };
+    </script>
+    <style>
+      @layer base {
+        html {
+          scroll-behavior: smooth;
+        }
+        html,
+        body {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          background-color: #f9f8f5;
+          color: #1a1c19;
+          font-family: "Plus Jakarta Sans", sans-serif;
+          -webkit-font-smoothing: antialiased;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        .pb-safe {
+          padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        .pt-safe {
+          padding-top: env(safe-area-inset-top, 0px);
         }
       }
-    };
-  </script>
-<style>
-    @layer base {
+      ::-webkit-scrollbar {
+        display: none;
+      }
       html {
-        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
       }
-      html, body {
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        background-color: #F9F8F5;
-        color: #1A1C19;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        -webkit-font-smoothing: antialiased;
+      img,
+      svg {
+        max-width: 100%;
       }
-      body {
-        overscroll-behavior: none;
+      section > *,
+      section.grid > * {
+        min-width: 0;
       }
-      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
-      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
-    }
-    ::-webkit-scrollbar { display: none; }
-    
-    .font-editorial {
-      font-family: 'Newsreader', serif;
-    }
-  </style>
-</head>
-<body class="bg-background text-charcoal min-h-screen flex flex-col antialiased selection:bg-ochre-soft selection:text-ochre">
-<!-- Top Header: Floating Minimalist Architecture Monogram -->
-<header class="fixed top-0 inset-x-0 z-50 pt-safe bg-[#F9F8F5]/85 backdrop-blur-md border-b border-stone-border/60 transition-all duration-300">
-<div class="h-16 px-margin flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-editorial text-[17px] tracking-[0.14em] uppercase text-charcoal font-medium leading-none">
-          Citra Griya Panjen
-        </span>
-<span class="text-[9.5px] uppercase tracking-[0.2em] text-stone-grey font-medium mt-1">
-          Kepanjen • Malang Selatan
-        </span>
-</div>
-<div class="flex items-center gap-2">
-<span class="hidden sm:inline-block text-[11px] font-sans tracking-wide text-stone-grey">FLPP 2025</span>
-<a aria-label="Hubungi Konsultan Arsitektural" class="h-9 px-3 rounded-full border border-stone-border bg-surface-pure/60 hover:bg-surface-pure active:scale-95 transition-all flex items-center gap-1.5 text-stone-grey hover:text-pine" href="https://wa.me/?text=Halo%20Citra%20Griya%20Panjen,%20saya%20ingin%20berkonsultasi%20mengenai%20unit%20FLPP%20dan%20jadwal%20kunjungan." rel="noopener" target="_blank">
-<span class="material-symbols-outlined text-[15px]">chat_bubble_outline</span>
-<span class="text-[11px] tracking-wider font-medium uppercase">Tanya Legal</span>
-</a>
-</div>
-</div>
-</header>
-<!-- Main Content Container -->
-<main class="flex-1 w-full pt-20 pb-28 flex flex-col gap-12 sm:gap-16">
-<!-- HERO SECTION -->
-<section class="px-margin pt-4 flex flex-col">
-<!-- Quiet Editorial Tagline -->
-<div class="flex items-center gap-2 mb-4">
-<span class="w-1.5 h-1.5 rounded-full bg-pine"></span>
-<span class="text-[11px] uppercase tracking-[0.22em] text-stone-grey font-medium">
-          A Sanctuary in Malang • Sisa 9 Unit
-        </span>
-</div>
-<!-- Editorial Typography Headline -->
-<h1 class="font-editorial text-[38px] leading-[1.12] tracking-[-0.02em] font-normal text-charcoal mb-3">
-        Hunian Teduh<br/>
-<span class="italic font-light text-pine">Berkelanjutan.</span>
-</h1>
-<p class="text-[14px] leading-relaxed text-stone-grey max-w-[340px] font-light mb-6">
-        Rumah tapak subsidi modern berstandar resmi PUPR. Arsitektur bernapas, bersertifikat SHM murni, berlatar siluet sejuk Gunung Kawi.
-      </p>
-<!-- Architecture Visual Frame -->
-<div class="relative w-full rounded-[28px] overflow-hidden bg-stone-sand shadow-[0_12px_40px_rgba(23,54,39,0.06)] border border-stone-border/80 aspect-[16/11] mb-5">
-<img alt="Arsitektur Citra Griya Panjen Kepanjen Malang" class="w-full h-full object-cover scale-[1.01] transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/ALJJyrDcwKshcqJmxt7yF3yv6pWgp-5mP9vuoQxoSKk8nUnRASVQjdkCXVq7mLan6SxBlwLL2yNX4v6CwBx1AWwzpomqVH7_qxe4zP7_8DOaxV-TSWvTYF4cLe5Fgnzh6rY59cFX8wTZeYHX0Nrl1CtzrIcOhkttzP7r8g-LHEVilK8ADpkSMB9ya3-uIdeTb9TOlJPzt4Rf_cgECb4PYPkMDTnOZLdHwb07IgcsxXtH5dvi"/>
-<!-- Minimal Gradient Sheen -->
-<div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/10 to-transparent"></div>
-<!-- Architectural Pill Overlay (Bottom) -->
-<div class="absolute bottom-3.5 inset-x-3.5 p-3 rounded-2xl bg-surface-pure/95 backdrop-blur-md border border-white/50 flex items-center justify-between shadow-sm">
-<div class="flex flex-col">
-<span class="text-[10px] uppercase tracking-[0.16em] text-ochre font-semibold">Tipe 36/66 FLPP</span>
-<div class="flex items-baseline gap-1 mt-0.5">
-<span class="font-editorial text-[18px] text-charcoal font-medium">Rp 1,07 Jt</span>
-<span class="text-[11px] text-stone-grey font-light">/bulan flat</span>
-</div>
-</div>
-<div class="text-right">
-<span class="inline-flex items-center gap-1 text-[11px] text-pine font-medium">
-<span class="w-1.5 h-1.5 rounded-full bg-pine"></span>
-              Resmi SIRENG PUPR
+
+      .font-editorial {
+        font-family: "Newsreader", serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-charcoal min-h-screen flex flex-col antialiased selection:bg-ochre-soft selection:text-ochre"
+  >
+    <!-- Top Header: Floating Minimalist Architecture Monogram -->
+    <header
+      class="fixed top-0 inset-x-0 z-50 pt-safe bg-[#F9F8F5]/85 backdrop-blur-md border-b border-stone-border/60 transition-all duration-300"
+    >
+      <div
+        class="h-16 px-margin md:px-8 max-w-6xl mx-auto flex items-center justify-between"
+      >
+        <div class="flex flex-col">
+          <span
+            class="font-editorial text-[17px] tracking-[0.14em] uppercase text-charcoal font-medium leading-none"
+          >
+            Citra Griya Panjen
+          </span>
+          <span
+            class="text-[9.5px] uppercase tracking-[0.2em] text-stone-grey font-medium mt-1"
+          >
+            Panjen • Jombang
+          </span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span
+            class="hidden sm:inline-block text-[11px] font-sans tracking-wide text-stone-grey"
+            >FLPP 2025</span
+          >
+          <a
+            aria-label="Isi form kualifikasi"
+            class="h-9 px-3 rounded-full border border-stone-border bg-surface-pure/60 hover:bg-surface-pure active:scale-95 transition-all flex items-center gap-1.5 text-stone-grey hover:text-pine"
+            href="#form-kualifikasi"
+          >
+            <span class="material-symbols-outlined text-[15px]">edit_note</span>
+            <span class="text-[11px] tracking-wider font-medium uppercase"
+              >Isi Form</span
+            >
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content Container -->
+    <main
+      class="flex-1 w-full max-w-6xl mx-auto pt-20 md:pt-24 pb-28 flex flex-col gap-12 sm:gap-16"
+    >
+      <!-- HERO SECTION -->
+      <section
+        class="px-margin md:px-8 pt-4 grid grid-cols-1 lg:grid-cols-2 lg:gap-14 lg:items-center"
+      >
+        <div class="flex flex-col">
+          <!-- Quiet Editorial Tagline -->
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-pine"></span>
+            <span
+              class="text-[11px] uppercase tracking-[0.22em] text-stone-grey font-medium"
+            >
+              A Sanctuary in Jombang • Sisa 9 Unit
             </span>
-</div>
-</div>
-</div>
-<!-- Action Button: Refined Editorial CTA -->
-<a class="group w-full py-4 px-6 rounded-2xl bg-pine hover:bg-pine-dark active:scale-[0.99] text-surface-pure text-[13.5px] tracking-wide font-medium flex items-center justify-between transition-all duration-300 shadow-md" href="#form-kualifikasi">
-<span class="tracking-wider">Mulai Kualifikasi Mandiri</span>
-<div class="flex items-center gap-2">
-<span class="text-[11px] text-white/60 font-light">30 Detik</span>
-<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
-</div>
-</a>
-<span class="text-center text-[11px] text-stone-light mt-2.5 font-light tracking-wide">
-        Bebas biaya administrasi konsultasi • Didampingi hingga serah terima kunci
-      </span>
-</section>
-<!-- EDITORIAL HIGHLIGHTS (BENTO GALLERY STYLE) -->
-<section class="px-margin">
-<div class="flex flex-col mb-4">
-<span class="text-[10px] uppercase tracking-[0.2em] text-ochre font-semibold">Nilai Dasar</span>
-<h2 class="font-editorial text-[24px] text-charcoal font-normal mt-0.5">Esensi Kepemilikan</h2>
-</div>
-<div class="grid grid-cols-2 gap-3">
-<!-- 01 DP 0% -->
-<div class="p-4 rounded-2xl bg-surface-pure border border-stone-border/70 flex flex-col justify-between h-[138px]">
-<span class="font-editorial text-[13px] text-stone-light">01 /</span>
-<div class="flex flex-col">
-<span class="font-editorial text-[26px] text-pine leading-none font-normal">0%</span>
-<span class="text-[12px] font-medium text-charcoal mt-1">Uang Muka (DP)</span>
-<span class="text-[10.5px] text-stone-grey leading-tight font-light mt-0.5">Bebas biaya notaris &amp; BPHTB</span>
-</div>
-</div>
-<!-- 02 Bunga Flat -->
-<div class="p-4 rounded-2xl bg-surface-pure border border-stone-border/70 flex flex-col justify-between h-[138px]">
-<span class="font-editorial text-[13px] text-stone-light">02 /</span>
-<div class="flex flex-col">
-<span class="font-editorial text-[26px] text-ochre leading-none font-normal">5.0%</span>
-<span class="text-[12px] font-medium text-charcoal mt-1">Bunga Terkunci</span>
-<span class="text-[10.5px] text-stone-grey leading-tight font-light mt-0.5">Tetap s.d pelunasan 20 thn</span>
-</div>
-</div>
-<!-- 03 Akses -->
-<div class="p-4 rounded-2xl bg-surface-pure border border-stone-border/70 flex flex-col justify-between h-[138px]">
-<span class="font-editorial text-[13px] text-stone-light">03 /</span>
-<div class="flex flex-col">
-<span class="font-editorial text-[26px] text-charcoal leading-none font-normal">7 Mnt</span>
-<span class="text-[12px] font-medium text-charcoal mt-1">Konektivitas Kota</span>
-<span class="text-[10.5px] text-stone-grey leading-tight font-light mt-0.5">Stasiun KA &amp; RSUD Panjen</span>
-</div>
-</div>
-<!-- 04 SHM -->
-<div class="p-4 rounded-2xl bg-surface-pure border border-stone-border/70 flex flex-col justify-between h-[138px]">
-<span class="font-editorial text-[13px] text-stone-light">04 /</span>
-<div class="flex flex-col">
-<span class="font-editorial text-[26px] text-pine leading-none font-normal">100%</span>
-<span class="text-[12px] font-medium text-charcoal mt-1">SHM Murni</span>
-<span class="text-[10.5px] text-stone-grey leading-tight font-light mt-0.5">Bukan HGB, sertifikat kavling</span>
-</div>
-</div>
-</div>
-</section>
-<!-- UNIT ARCHITECTURE SHOWCASE (CATALOGUE) -->
-<section class="px-margin flex flex-col gap-5">
-<div class="flex items-end justify-between border-b border-stone-border pb-3">
-<div class="flex flex-col">
-<span class="text-[10px] uppercase tracking-[0.2em] text-stone-grey font-medium">Portofolio Denah</span>
-<h2 class="font-editorial text-[24px] text-charcoal font-normal mt-0.5">Koleksi Tipe Unit</h2>
-</div>
-<span class="text-[11px] font-editorial italic text-stone-grey">Edisi 2025</span>
-</div>
-<!-- Unit 1: Tipe 36/66 (FLPP) -->
-<article class="p-4 rounded-[26px] bg-surface-pure border border-stone-border/80 shadow-[0_4px_24px_rgba(0,0,0,0.02)] flex flex-col gap-4">
-<div class="relative w-full h-48 rounded-2xl overflow-hidden bg-stone-sand">
-<img alt="Fasad Tipe 36 Subsidi Citra Griya" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUAmJEgWLFv9sFAfkSC5Qb5Zv9YzfOzZq-ircPDHqpIbXGykQ13dfXzBUCDBmnywm37eJAjJyqHiUJEx7VMxTlF9kLx6D2BPPaoo8uM5KnkByzTOKMEs4YEAPZ43UeZr4m7hyLfoVHjaE8qUrk_yeeAaGukaymVNWp6c3jljndbiRBnKkjyJpYlJQp0dNeDHNMtVO396M6bCg8g8rmFXNEL-uY0YcW_ga5AifKT_A"/>
-<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-pure/90 backdrop-blur-md text-[10px] tracking-wider uppercase font-semibold text-pine border border-stone-border/40">
-            Alur Subsidi FLPP
-          </span>
-<span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-charcoal/80 text-[10px] tracking-wider text-surface-pure font-light">
-            Sisa 4 Unit
-          </span>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex items-baseline justify-between">
-<h3 class="font-editorial text-[20px] text-charcoal">Tipe 36 / 66 — Standar Modern</h3>
-<span class="text-[12px] text-stone-grey font-light">Rp 166 Jt</span>
-</div>
-<p class="text-[12px] text-stone-grey font-light leading-relaxed">
-            Proporsi ideal dengan sirkulasi udara silang, plafon 3.8 meter, dan taman belakang yang fleksibel diperluas.
-          </p>
-</div>
-<!-- Architectural Metrics -->
-<div class="grid grid-cols-3 py-2.5 border-y border-stone-border/60 text-center">
-<div class="flex flex-col border-r border-stone-border/60 last:border-0">
-<span class="text-[9.5px] uppercase tracking-wider text-stone-light">Luas</span>
-<span class="font-editorial text-[15px] text-charcoal mt-0.5">36/66 m²</span>
-</div>
-<div class="flex flex-col border-r border-stone-border/60 last:border-0">
-<span class="text-[9.5px] uppercase tracking-wider text-stone-light">Kamar</span>
-<span class="font-editorial text-[15px] text-charcoal mt-0.5">2 Ruang</span>
-</div>
-<div class="flex flex-col">
-<span class="text-[9.5px] uppercase tracking-wider text-stone-light">Cicilan</span>
-<span class="font-editorial text-[15px] text-pine font-medium mt-0.5">1,07 Jt/bln</span>
-</div>
-</div>
-<a class="w-full py-3 rounded-xl border border-pine text-pine hover:bg-pine hover:text-surface-pure transition-colors text-center text-[12.5px] font-medium tracking-wide flex items-center justify-center gap-1.5" href="https://wa.me/?text=Halo%20Marketing%20Citra%20Griya%20Panjen,%20saya%20tertarik%20mempelajari%20denah%20dan%20kuota%20Tipe%2036/66%20Subsidi%20FLPP." rel="noopener" target="_blank">
-<span>Kunci Kuota Tipe 36</span>
-<span class="material-symbols-outlined text-[16px]">north_east</span>
-</a>
-</article>
-<!-- Unit 2: Tipe 45/84 (Komersil) -->
-<article class="p-4 rounded-[26px] bg-surface-pure border border-stone-border/80 shadow-[0_4px_24px_rgba(0,0,0,0.02)] flex flex-col gap-4">
-<div class="relative w-full h-48 rounded-2xl overflow-hidden bg-stone-sand">
-<img alt="Fasad Tipe 45 Komersil Citra Griya" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2b0Cn2DWkS89tkmArtdQ_BUsmi5s9V0CoWy9Oz5SeABRuawN6808Dbi3TE4H-to8LSf0f0NrP9icjQu0J1-RVguMpZ13ptUgfwwuOkNW4GV3XRVR-n9POvifmCNGZTh9ZzLm8jZnrsYNPokRaLijBiJinkgEqwUx0tmyG5OK6ez4JxMr-WKI214A4vVStuqENDrJMX1JnwrcPUhouUMcg6Pn6vQqKrcl33zkzzc4"/>
-<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-pure/90 backdrop-blur-md text-[10px] tracking-wider uppercase font-semibold text-ochre border border-stone-border/40">
-            Seri Komersil Hook
-          </span>
-<span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-charcoal/80 text-[10px] tracking-wider text-surface-pure font-light">
-            Sisa 5 Unit
-          </span>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex items-baseline justify-between">
-<h3 class="font-editorial text-[20px] text-charcoal">Tipe 45 / 84 — Luas Ekstra</h3>
-<span class="text-[12px] text-stone-grey font-light">Rp 285 Jt</span>
-</div>
-<p class="text-[12px] text-stone-grey font-light leading-relaxed">
-            Fasad lebih lebar dengan dobel carport, plafon sejuk 4.2 meter, dan bukaan cahaya alami melimpah.
-          </p>
-</div>
-<!-- Architectural Metrics -->
-<div class="grid grid-cols-3 py-2.5 border-y border-stone-border/60 text-center">
-<div class="flex flex-col border-r border-stone-border/60 last:border-0">
-<span class="text-[9.5px] uppercase tracking-wider text-stone-light">Luas</span>
-<span class="font-editorial text-[15px] text-charcoal mt-0.5">45/84 m²</span>
-</div>
-<div class="flex flex-col border-r border-stone-border/60 last:border-0">
-<span class="text-[9.5px] uppercase tracking-wider text-stone-light">Carport</span>
-<span class="font-editorial text-[15px] text-charcoal mt-0.5">Mobil + Motor</span>
-</div>
-<div class="flex flex-col">
-<span class="text-[9.5px] uppercase tracking-wider text-stone-light">Cicilan</span>
-<span class="font-editorial text-[15px] text-ochre font-medium mt-0.5">2,1 Jt/bln</span>
-</div>
-</div>
-<a class="w-full py-3 rounded-xl border border-stone-border text-charcoal hover:bg-stone-sand transition-colors text-center text-[12.5px] font-medium tracking-wide flex items-center justify-center gap-1.5" href="https://wa.me/?text=Halo%20Marketing%20Citra%20Griya%20Panjen,%20saya%20ingin%20konsultasi%20skema%20Tipe%2045/84%20Komersil." rel="noopener" target="_blank">
-<span>Detail Spesifikasi Komersil</span>
-<span class="material-symbols-outlined text-[16px]">north_east</span>
-</a>
-</article>
-</section>
-<!-- PRIVATE CONSULTATION & INTERACTIVE QUALIFICATION SECTION -->
-<section class="px-margin flex flex-col gap-6" id="form-kualifikasi">
-<!-- KARTU CICILAN & SKEMA RESMI PEMERINTAH (FLPP PUPR) -->
-<div class="p-6 rounded-[28px] bg-surface-pure border border-stone-border shadow-sm flex flex-col gap-5">
-<div class="flex flex-col gap-1.5">
-<div class="flex items-center justify-between text-[11px] uppercase tracking-wider text-stone-grey font-medium">
-<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-pine"></span>Skema Resmi KPR FLPP</span>
-<span class="text-ochre font-semibold">Subsidi PUPR 2025</span>
-</div>
-<h2 class="font-editorial text-[24px] text-charcoal leading-snug">
-        Tabel Cicilan Resmi Pemerintah
-      </h2>
-<p class="text-[12px] text-stone-grey font-light leading-relaxed">
-        Transparan tanpa biaya tersembunyi. Suku bunga subsidi tetap 5.0% flat sampai lunas, didukung fasilitas SBUM resmi negara.
-      </p>
-</div>
-<!-- Rincian Data KPR Resmi -->
-<div class="grid grid-cols-2 gap-2.5 p-3.5 rounded-2xl bg-stone-sand/50 border border-stone-border/60 text-[11.5px]">
-<div class="flex flex-col">
-<span class="text-[10px] uppercase tracking-wider text-stone-light">Harga Jual Resmi</span>
-<span class="font-editorial text-[16px] text-charcoal font-medium mt-0.5">Rp 166.000.000</span>
-</div>
-<div class="flex flex-col">
-<span class="text-[10px] uppercase tracking-wider text-stone-light">Uang Muka KPR</span>
-<span class="font-editorial text-[16px] text-pine font-medium mt-0.5">Rp 2.000.000</span>
-</div>
-<div class="flex flex-col border-t border-stone-border/40 pt-2">
-<span class="text-[10px] uppercase tracking-wider text-stone-light">Bantuan SBUM Negara</span>
-<span class="font-editorial text-[16px] text-ochre font-medium mt-0.5">Rp 4.000.000</span>
-</div>
-<div class="flex flex-col border-t border-stone-border/40 pt-2">
-<span class="text-[10px] uppercase tracking-wider text-stone-light">Pokok Pembiayaan KPR</span>
-<span class="font-editorial text-[16px] text-charcoal font-medium mt-0.5">Rp 160.000.000</span>
-</div>
-</div>
-<!-- Keterangan Alur Pilihan Tenor -->
-<div class="p-3.5 rounded-2xl bg-stone-sand/40 border border-stone-border/60 flex items-start gap-2.5">
-<span class="material-symbols-outlined text-[18px] text-pine shrink-0 mt-0.5">tune</span>
-<p class="text-[11.5px] text-stone-grey leading-relaxed font-light">
-<strong class="text-charcoal font-medium">Simulasi Tenor Fleksibel:</strong> Pilihan tenor resmi (5 hingga 20 tahun) dan nominal angsuran bulanan yang presisi dapat Anda tentukan langsung pada formulir kualifikasi mandiri di bawah ini.
-      </p>
-</div>
-<!-- Keamanan Garansi Bank Rekanan Resmi FLPP -->
-<div class="flex items-center gap-2 text-[11px] text-pine font-medium bg-stone-sand/50 p-2.5 rounded-xl border border-stone-border/40">
-<span class="material-symbols-outlined text-[16px] text-pine shrink-0">verified</span>
-<span>Bunga Terkunci 5% Flat Didukung Bank Rekanan Resmi FLPP (BTN, Mandiri, BRI, BSI Syariah) &amp; BP Tapera</span>
-</div>
-</div>
-<!-- MULTI-STEP WIZARD FORM (SEAMLESS 3-STEP QUALIFICATION) -->
-<div class="p-6 rounded-[28px] bg-stone-sand border border-stone-border shadow-sm flex flex-col gap-5">
-<!-- Step Indicator & Smooth Progress Bar -->
-<div class="flex flex-col gap-2">
-<div class="flex items-center justify-between text-[11px] font-medium text-stone-grey">
-<span class="uppercase tracking-wider" id="step-indicator-title">Langkah 1: Kenyamanan Cicilan</span>
-<span class="text-pine font-semibold" id="step-indicator-count">1 dari 3</span>
-</div>
-<div class="w-full h-1.5 bg-stone-border/60 rounded-full overflow-hidden">
-<div class="h-full bg-pine transition-all duration-300 rounded-full" id="wizard-progress-bar" style="width: 33.33%"></div>
-</div>
-</div>
-<!-- STEP 1: KENYAMANAN CICILAN -->
-<div class="flex flex-col gap-4" id="wizard-step-1">
-<div class="flex flex-col gap-1">
-<h3 class="font-editorial text-[20px] text-charcoal font-normal">Pilih Kenyamanan Cicilan Anda</h3>
-<p class="text-[11.5px] text-stone-grey font-light leading-relaxed">
-          Tentukan estimasi alokasi angsuran bulanan resmi yang paling realistis bagi keuangan Anda.
-        </p>
-</div>
-<div class="grid grid-cols-2 gap-2.5">
-<!-- Tenor 20 Thn -->
-<label class="tenor-option p-3 rounded-xl bg-surface-pure border-2 border-pine flex flex-col cursor-pointer transition-all has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60 relative">
-<span class="absolute -top-2 right-2 px-1.5 py-0.2 rounded-full bg-pine text-[8.5px] uppercase tracking-wider font-semibold text-surface-pure">
-            Paling Diminati
-          </span>
-<div class="flex items-center justify-between mt-0.5">
-<span class="text-[10px] font-semibold text-pine uppercase tracking-wider">Tenor 20 Th</span>
-<input checked="" class="w-4 h-4 accent-pine" data-nominal="Rp 1.073.571 /bln" name="wizard_installment" type="radio" value="Rp 1.073.571 /bln (20 Tahun)"/>
-</div>
-<span class="font-editorial text-[17px] text-charcoal font-medium mt-1">Rp 1.073.571</span>
-<span class="text-[10px] text-stone-grey font-light">/bulan flat</span>
-</label>
-<!-- Tenor 15 Thn -->
-<label class="tenor-option p-3 rounded-xl bg-surface-pure border border-stone-border/80 flex flex-col cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60">
-<div class="flex items-center justify-between">
-<span class="text-[10px] font-semibold text-stone-grey uppercase tracking-wider">Tenor 15 Th</span>
-<input class="w-4 h-4 accent-pine" data-nominal="Rp 1.299.590 /bln" name="wizard_installment" type="radio" value="Rp 1.299.590 /bln (15 Tahun)"/>
-</div>
-<span class="font-editorial text-[17px] text-charcoal font-medium mt-1">Rp 1.299.590</span>
-<span class="text-[10px] text-stone-grey font-light">/bulan flat</span>
-</label>
-<!-- Tenor 10 Thn -->
-<label class="tenor-option p-3 rounded-xl bg-surface-pure border border-stone-border/80 flex flex-col cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60">
-<div class="flex items-center justify-between">
-<span class="text-[10px] font-semibold text-stone-grey uppercase tracking-wider">Tenor 10 Th</span>
-<input class="w-4 h-4 accent-pine" data-nominal="Rp 1.743.081 /bln" name="wizard_installment" type="radio" value="Rp 1.743.081 /bln (10 Tahun)"/>
-</div>
-<span class="font-editorial text-[17px] text-charcoal font-medium mt-1">Rp 1.743.081</span>
-<span class="text-[10px] text-stone-grey font-light">/bulan flat</span>
-</label>
-<!-- Tenor 5 Thn -->
-<label class="tenor-option p-3 rounded-xl bg-surface-pure border border-stone-border/80 flex flex-col cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60">
-<div class="flex items-center justify-between">
-<span class="text-[10px] font-semibold text-ochre uppercase tracking-wider">Tenor 5 Th</span>
-<input class="w-4 h-4 accent-pine" data-nominal="Rp 3.019.397 /bln" name="wizard_installment" type="radio" value="Rp 3.019.397 /bln (5 Tahun)"/>
-</div>
-<span class="font-editorial text-[17px] text-charcoal font-medium mt-1">Rp 3.019.397</span>
-<span class="text-[10px] text-stone-grey font-light">/bulan flat</span>
-</label>
-</div>
-<button class="w-full py-3.5 px-5 rounded-2xl bg-pine hover:bg-pine-dark text-surface-pure text-[13px] font-medium tracking-wide flex items-center justify-center gap-2 transition-all shadow-md mt-1 cursor-pointer" id="btn-wizard-step1-next" type="button">
-<span>Lanjut ke Jadwal Survei</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</button>
-</div>
-<!-- STEP 2: RENCANA JADWAL SURVEI -->
-<div class="hidden flex flex-col gap-4" id="wizard-step-2">
-<div class="flex flex-col gap-1">
-<h3 class="font-editorial text-[20px] text-charcoal font-normal">Rencana Jadwal Kunjungan</h3>
-<p class="text-[11.5px] text-stone-grey font-light leading-relaxed">
-          Tentukan rentang waktu yang paling santai agar tim konsultan kami dapat mendampingi ke lokasi kavling.
-        </p>
-</div>
-<div class="flex flex-col gap-2">
-<!-- Opsi 1: Pekan Ini (1–7 Hari ke Depan) -->
-<label class="p-3 rounded-xl bg-surface-pure border-2 border-pine flex items-center justify-between cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60">
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-[18px] text-pine">calendar_today</span>
-<div class="flex flex-col">
-<span class="text-[12.5px] font-medium text-charcoal">Pekan Ini (1–7 Hari ke Depan)</span>
-<span class="text-[10px] text-stone-grey font-light">Prioritas pendampingan &amp; cek fisik unit</span>
-</div>
-</div>
-<input checked="" class="w-4 h-4 accent-pine" name="wizard_schedule" type="radio" value="Pekan Ini (1–7 Hari ke Depan)"/>
-</label>
-<!-- Opsi 2: Bulan Ini (Dalam 30 Hari) -->
-<label class="p-3 rounded-xl bg-surface-pure border border-stone-border/80 flex items-center justify-between cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60">
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-[18px] text-pine">calendar_month</span>
-<div class="flex flex-col">
-<span class="text-[12.5px] font-medium text-charcoal">Bulan Ini (Dalam 30 Hari)</span>
-<span class="text-[10px] text-stone-grey font-light">Pencocokan waktu cuti atau gajian</span>
-</div>
-</div>
-<input class="w-4 h-4 accent-pine" name="wizard_schedule" type="radio" value="Bulan Ini (Dalam 30 Hari)"/>
-</label>
-<!-- Opsi 3: 2–3 Bulan ke Depan -->
-<label class="p-3 rounded-xl bg-surface-pure border border-stone-border/80 flex items-center justify-between cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60">
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-[18px] text-pine">date_range</span>
-<div class="flex flex-col">
-<span class="text-[12.5px] font-medium text-charcoal">Beberapa Bulan Lagi (2–3 Bulan ke Depan)</span>
-<span class="text-[10px] text-stone-grey font-light">Rencana persiapan dana &amp; berkas bertahap</span>
-</div>
-</div>
-<input class="w-4 h-4 accent-pine" name="wizard_schedule" type="radio" value="2–3 Bulan ke Depan"/>
-</label>
-<!-- Opsi 4: Belum Pasti / Ingin Tanya-Tanya Dulu via WhatsApp -->
-<label class="p-3 rounded-xl bg-surface-pure border border-stone-border/80 flex items-center justify-between cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60">
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-[18px] text-pine">chat</span>
-<div class="flex flex-col">
-<span class="text-[12.5px] font-medium text-charcoal">Belum Pasti / Ingin Tanya-Tanya Dulu via WhatsApp</span>
-<span class="text-[10px] text-stone-grey font-light">Diskusi santai dan unduh denah/spesifikasi</span>
-</div>
-</div>
-<input class="w-4 h-4 accent-pine" name="wizard_schedule" type="radio" value="Belum Pasti / Ingin Tanya-Tanya Dulu via WhatsApp"/>
-</label>
-</div>
-<div class="flex items-center gap-2 mt-1">
-<button class="py-3.5 px-4 rounded-2xl border border-stone-border bg-surface-pure text-stone-grey hover:text-pine text-[12.5px] font-medium transition-all cursor-pointer" id="btn-wizard-step2-prev" type="button">
-          Kembali
-        </button>
-<button class="flex-1 py-3.5 px-5 rounded-2xl bg-pine hover:bg-pine-dark text-surface-pure text-[13px] font-medium tracking-wide flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer" id="btn-wizard-step2-next" type="button">
-<span>Lanjut ke Langkah Terakhir</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</button>
-</div>
-</div>
-<!-- STEP 3: DATA KONFIRMASI PENGUNCIAN KUOTA -->
-<div class="hidden flex flex-col gap-4" id="wizard-step-3">
-<div class="flex flex-col gap-1">
-<h3 class="font-editorial text-[20px] text-charcoal font-normal">Verifikasi Berkas &amp; Kuota</h3>
-<p class="text-[11.5px] text-stone-grey font-light leading-relaxed">
-          Masukkan data kontak untuk menerima rincian jadwal survei dan konfirmasi berkas FLPP langsung via WhatsApp.
-        </p>
-</div>
-<div class="flex flex-col gap-3">
-<div class="flex flex-col gap-1">
-<label class="text-[11px] uppercase tracking-wider text-stone-grey font-medium" for="wizard-name">Nama Lengkap</label>
-<input class="w-full px-3.5 py-3 rounded-xl border border-stone-border bg-surface-pure text-[13px] text-charcoal focus:border-pine focus:outline-none" id="wizard-name" placeholder="Contoh: Bpk. Kurniawan" type="text"/>
-</div>
-<div class="flex flex-col gap-1">
-<label class="text-[11px] uppercase tracking-wider text-stone-grey font-medium" for="wizard-whatsapp">Nomor WhatsApp Aktif</label>
-<input class="w-full px-3.5 py-3 rounded-xl border border-stone-border bg-surface-pure text-[13px] text-charcoal focus:border-pine focus:outline-none" id="wizard-whatsapp" placeholder="08xxxxxxxxxx" type="tel"/>
-</div>
-</div>
-<!-- Summary Ringkas Kuota -->
-<div class="p-3 rounded-xl bg-surface-pure border border-stone-border/60 flex flex-col gap-1 text-[11px]">
-<div class="flex items-center justify-between text-stone-grey">
-<span>Unit:</span>
-<span class="font-medium text-charcoal">Tipe 36/66 FLPP (Subsidi)</span>
-</div>
-<div class="flex items-center justify-between text-stone-grey">
-<span>Pilihan Tenor:</span>
-<span class="font-medium text-pine" id="summary-installment">Rp 1.073.571 / bln (20 Th)</span>
-</div>
-<div class="flex items-center justify-between text-stone-grey">
-<span>Rencana Survei:</span>
-<span class="font-medium text-charcoal" id="summary-schedule">Pekan Ini (1–7 Hari ke Depan)</span>
-</div>
-</div>
-<!-- 1 CALL TO ACTION (CTA) FINAL PENENTU -->
-<div class="flex items-center gap-2 mt-1">
-<button class="py-3.5 px-4 rounded-2xl border border-stone-border bg-surface-pure text-stone-grey hover:text-pine text-[12.5px] font-medium transition-all cursor-pointer" id="btn-wizard-step3-prev" type="button">
-          Kembali
-        </button>
-<a class="flex-1 py-4 px-4 rounded-2xl bg-pine hover:bg-pine-dark text-surface-pure text-[12.5px] font-medium tracking-wide flex items-center justify-center gap-2 transition-all shadow-md" href="https://wa.me/?text=Halo%20Citra%20Griya%20Panjen,%20saya%20ingin%20mengunci%20kuota%20unit%20subsidi%20FLPP%20dan%20konfirmasi%20jadwal%20survei." id="btn-final-whatsapp-submit" rel="noopener" target="_blank">
-<span class="material-symbols-outlined text-[17px]">verified</span>
-<span class="text-center leading-snug">Kirim Jadwal Survei &amp; Dapatkan Brosur Resmi</span>
-</a>
-</div>
-</div>
-<span class="text-center text-[10px] text-stone-light font-light">
-      Data Anda aman • Tanpa perantara calo • Konsultasi didampingi legal resmi Citra Griya
-    </span>
-</div>
-</section>
-<!-- SYARAT BERKAS DOKUMEN PENGAJUAN SUBSIDI (RESMI PUPR & BANK MITRA) -->
-<section class="px-margin flex flex-col gap-4">
-<div class="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-ochre font-semibold">
-<div class="flex items-center gap-1.5">
-<span class="w-1.5 h-1.5 rounded-full bg-ochre"></span>
-<span>Panduan Dokumen KPR FLPP</span>
-</div>
-<span class="text-stone-grey text-[9.5px]">BTN • Mandiri • BRI • BSI</span>
-</div>
-<h2 class="font-editorial text-[24px] text-charcoal font-normal mt-0.5">Syarat Berkas Pengajuan Subsidi</h2>
-<p class="text-[12px] text-stone-grey font-light leading-relaxed mt-1">
-      Tabel ringkas resmi — berlaku untuk Karyawan &amp; Pengusaha / Wiraswasta sesuai standardisasi perbankan nasional rekanan FLPP.
-    </p>
-<!-- Kartu Tabel Rinci Editorial Japandi -->
-<div class="rounded-[26px] bg-surface-pure border border-stone-border/80 shadow-[0_4px_24px_rgba(0,0,0,0.02)] overflow-hidden">
-<!-- 1. BERKAS UMUM (WAJIB SEMUA) -->
-<div class="border-b border-stone-border/70">
-<div class="bg-stone-sand/60 px-4 py-2.5 flex items-center justify-between">
-<span class="text-[11px] font-semibold uppercase tracking-wider text-charcoal flex items-center gap-1.5">
-<span class="w-1.5 h-1.5 rounded-full bg-pine"></span>
-            1. Berkas Umum (Wajib Semua)
-          </span>
-<span class="text-[9.5px] uppercase tracking-wider font-medium text-pine bg-surface-pure px-2 py-0.5 rounded-full border border-stone-border/60">Wajib Ada</span>
-</div>
-<div class="divide-y divide-stone-border/50 text-[12px]">
-<div class="p-3 px-4 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="font-editorial text-stone-light text-[13px] w-4">01</span>
-<span class="text-charcoal font-medium">FC KTP Pemohon</span>
-</div>
-<span class="text-[11px] font-medium text-pine flex items-center gap-1">
-<span class="material-symbols-outlined text-[15px]">check_circle</span> Karyawan &amp; Usaha
-            </span>
-</div>
-<div class="p-3 px-4 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="font-editorial text-stone-light text-[13px] w-4">02</span>
-<span class="text-charcoal font-medium">FC Kartu Keluarga (KK)</span>
-</div>
-<span class="text-[11px] font-medium text-pine flex items-center gap-1">
-<span class="material-symbols-outlined text-[15px]">check_circle</span> Karyawan &amp; Usaha
-            </span>
-</div>
-<div class="p-3 px-4 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="font-editorial text-stone-light text-[13px] w-4">03</span>
-<span class="text-charcoal font-medium">Pas Foto 4x6 (3 Lembar)</span>
-</div>
-<span class="text-[11px] font-medium text-pine flex items-center gap-1">
-<span class="material-symbols-outlined text-[15px]">check_circle</span> Karyawan &amp; Usaha
-            </span>
-</div>
-<div class="p-3 px-4 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="font-editorial text-stone-light text-[13px] w-4">04</span>
-<span class="text-charcoal font-medium">NPWP Pemohon</span>
-</div>
-<span class="text-[11px] font-medium text-pine flex items-center gap-1">
-<span class="material-symbols-outlined text-[15px]">check_circle</span> Karyawan &amp; Usaha
-            </span>
-</div>
-<div class="p-3 px-4 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="font-editorial text-stone-light text-[13px] w-4">05</span>
-<span class="text-charcoal font-medium">Surat Ket. Belum Punya Rumah</span>
-</div>
-<span class="text-[10px] text-stone-grey font-light">Dari Desa / Kelurahan</span>
-</div>
-</div>
-</div>
-<!-- 2. SESUAI PEKERJAAN (KOMPARASI KARYAWAN & WIRASWASTA) -->
-<div class="border-b border-stone-border/70">
-<div class="bg-stone-sand/60 px-4 py-2.5 flex items-center justify-between">
-<span class="text-[11px] font-semibold uppercase tracking-wider text-charcoal flex items-center gap-1.5">
-<span class="w-1.5 h-1.5 rounded-full bg-ochre"></span>
-            2. Berkas Sesuai Pekerjaan
-          </span>
-<span class="text-[9.5px] uppercase tracking-wider font-medium text-stone-grey bg-surface-pure px-2 py-0.5 rounded-full border border-stone-border/60">Pilih Salah Satu</span>
-</div>
-<!-- TABEL KOMPARASI DUA KOLOM -->
-<div class="grid grid-cols-2 divide-x divide-stone-border/70">
-<!-- Karyawan -->
-<div class="p-3.5 flex flex-col gap-2.5">
-<div class="flex items-center gap-1.5 border-b border-stone-border/50 pb-2">
-<span class="material-symbols-outlined text-[15px] text-pine">badge</span>
-<span class="text-[11.5px] font-semibold text-charcoal">Karyawan</span>
-</div>
-<ul class="flex flex-col gap-2 text-[11px] text-stone-grey font-light">
-<li class="flex items-start gap-1.5">
-<span class="material-symbols-outlined text-[14px] text-pine shrink-0 mt-0.5">check</span>
-<span>Surat Keterangan Kerja (SK Kerja Aktif)</span>
-</li>
-<li class="flex items-start gap-1.5">
-<span class="material-symbols-outlined text-[14px] text-pine shrink-0 mt-0.5">check</span>
-<span>Slip Gaji 3 Bulan Terakhir</span>
-</li>
-<li class="flex items-start gap-1.5">
-<span class="material-symbols-outlined text-[14px] text-pine shrink-0 mt-0.5">check</span>
-<span>Cetak Rekening Koran 3 Bulan Terakhir</span>
-</li>
-</ul>
-</div>
-<!-- Pengusaha / Wiraswasta -->
-<div class="p-3.5 flex flex-col gap-2.5 bg-stone-sand/20">
-<div class="flex items-center gap-1.5 border-b border-stone-border/50 pb-2">
-<span class="material-symbols-outlined text-[15px] text-ochre">storefront</span>
-<span class="text-[11.5px] font-semibold text-charcoal">Wiraswasta / Usaha</span>
-</div>
-<ul class="flex flex-col gap-2 text-[11px] text-stone-grey font-light">
-<li class="flex items-start gap-1.5">
-<span class="material-symbols-outlined text-[14px] text-ochre shrink-0 mt-0.5">check</span>
-<span>Surat Keterangan Usaha (SKU) Desa</span>
-</li>
-<li class="flex items-start gap-1.5">
-<span class="material-symbols-outlined text-[14px] text-ochre shrink-0 mt-0.5">check</span>
-<span>Laporan Pembukuan Usaha 6 Bulan</span>
-</li>
-<li class="flex items-start gap-1.5">
-<span class="material-symbols-outlined text-[14px] text-ochre shrink-0 mt-0.5">check</span>
-<span>Foto Tampak Depan &amp; Aktivitas Usaha</span>
-</li>
-<li class="flex items-start gap-1.5">
-<span class="material-symbols-outlined text-[14px] text-ochre shrink-0 mt-0.5">check</span>
-<span>Cetak Rekening Koran 6 Bulan Terakhir</span>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- 3. STATUS PERNIKAHAN -->
-<div>
-<div class="bg-stone-sand/60 px-4 py-2.5 flex items-center justify-between">
-<span class="text-[11px] font-semibold uppercase tracking-wider text-charcoal flex items-center gap-1.5">
-<span class="w-1.5 h-1.5 rounded-full bg-stone-grey"></span>
-            3. Tambahan Sesuai Status Pernikahan
-          </span>
-</div>
-<div class="grid grid-cols-2 divide-x divide-stone-border/70 p-3.5 text-[11px]">
-<div class="pr-2 flex flex-col gap-1.5">
-<span class="font-medium text-charcoal text-[11.5px]">Sudah Menikah:</span>
-<span class="text-stone-grey font-light">• FC KTP Suami &amp; Istri</span>
-<span class="text-stone-grey font-light">• FC Buku Nikah / Akta Cerai</span>
-<span class="text-stone-grey font-light">• Surat Ket. Belum Miliki Rumah (Keduanya)</span>
-</div>
-<div class="pl-3 flex flex-col gap-1.5">
-<span class="font-medium text-charcoal text-[11.5px]">Belum Menikah:</span>
-<span class="text-stone-grey font-light">• Surat Keterangan Belum Menikah dari Desa / Kelurahan</span>
-</div>
-</div>
-</div>
-<!-- JAMINAN PENDAMPINGAN LEGAL -->
-<div class="p-3.5 bg-stone-sand/60 border-t border-stone-border/80 flex items-center gap-2.5">
-<span class="material-symbols-outlined text-[18px] text-pine shrink-0">support_agent</span>
-<p class="text-[11px] text-stone-grey leading-tight font-light">
-<strong class="text-charcoal font-medium">Pendampingan Penuh:</strong> Belum memiliki SKU atau butuh format surat desa? Tim legal kami mendampingi penyusunan berkas hingga terbit SP3K resmi Bank rekanan.
-      </p>
-</div>
-</div>
-</section>
-<!-- RESIDENTIAL TESTIMONIALS (EDITORIAL INTERVIEW QUOTES) -->
-<section class="px-margin flex flex-col gap-4">
-<div class="flex items-baseline justify-between">
-<div class="flex flex-col">
-<span class="text-[10px] uppercase tracking-[0.2em] text-stone-grey font-medium">Kisah Nyata</span>
-<h3 class="font-editorial text-[22px] text-charcoal font-normal mt-0.5">Warga Citra Griya</h3>
-</div>
-<span class="text-[11px] font-editorial italic text-stone-grey">140+ Keluarga</span>
-</div>
-<div class="flex flex-col gap-3">
-<!-- Quote 1 -->
-<blockquote class="p-5 rounded-2xl bg-surface-pure border border-stone-border/70 flex flex-col gap-3">
-<p class="font-editorial italic text-[15px] leading-relaxed text-charcoal">
-            “Sebagai karyawan kontrak pabrik gula, saya sempat pasrah tidak bisa lolos KPR bank. Tim Citra Griya memandu berkas sampai tuntas. Sekarang setiap pagi buka pintu langsung pemandangan hijau Gunung Kawi.”
-          </p>
-<div class="flex items-center justify-between pt-2 border-t border-stone-border/50 text-[11px]">
-<span class="font-medium text-charcoal">Bpk. Prasetyo &amp; Istri</span>
-<span class="text-stone-light">Warga Blok D</span>
-</div>
-</blockquote>
-<!-- Quote 2 -->
-<blockquote class="p-5 rounded-2xl bg-surface-pure border border-stone-border/70 flex flex-col gap-3">
-<p class="font-editorial italic text-[15px] leading-relaxed text-charcoal">
-            “Cicilannya sejuta sebulan, sama seperti biaya sewa rumah petak saya di suhat dulu. Lingkungannya tenang, jalan paving lebar, anak-anak aman main sepeda di depan rumah.”
-          </p>
-<div class="flex items-center justify-between pt-2 border-t border-stone-border/50 text-[11px]">
-<span class="font-medium text-charcoal">Ibu Dina Novita</span>
-<span class="text-stone-light">Wirausaha Mandiri</span>
-</div>
-</blockquote>
-</div>
-</section>
-<!-- LOCATION & CONVENIENCE -->
-<section class="px-margin">
-<div class="p-5 rounded-[26px] bg-surface-pure border border-stone-border/80 flex flex-col gap-3.5">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px] text-pine">location_on</span>
-<h4 class="font-editorial text-[18px] text-charcoal">Kepanjen, Malang Selatan</h4>
-</div>
-<span class="text-[11px] text-stone-grey font-light">Akses Aspal 7m</span>
-</div>
-<div class="w-full h-36 rounded-xl overflow-hidden relative shadow-inner bg-stone-sand" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUrBWu3gUf6R7rmXAQqTmWhQI2rtd2aw2iv6cj0baX5QYzwVSIoYc9JIwVHqanxGwBgDt4HedpF8BAJ_kYftmXaQR1gDv96VDfMJZIO8QGhqo1hkWJrs5vhBaOpJot1WGYv6Qt0-kol-xkYTfKpbzG1NrChj6steqf0mIsLzx2lms6Wu_wixg3MF68WX8PXQxkI7wutBy_8xEm-aeJE67CnWFOADn7KsU9svfZ608'); background-size: cover; background-position: center;">
-<div class="absolute inset-0 bg-charcoal/15"></div>
-<div class="absolute bottom-2.5 left-2.5 px-3 py-1 rounded-full bg-surface-pure/90 backdrop-blur-md text-[10.5px] font-medium text-charcoal border border-stone-border/50">
-            Jalan Lingkungan Paving Rapi
           </div>
-</div>
-<div class="grid grid-cols-2 gap-y-2 gap-x-3 pt-1 text-[11.5px] text-stone-grey font-light">
-<div class="flex items-center gap-1.5">
-<span class="w-1 h-1 rounded-full bg-pine"></span>
-<span>5 Mnt dari Jalibar</span>
-</div>
-<div class="flex items-center gap-1.5">
-<span class="w-1 h-1 rounded-full bg-pine"></span>
-<span>7 Mnt Stasiun Kepanjen</span>
-</div>
-<div class="flex items-center gap-1.5">
-<span class="w-1 h-1 rounded-full bg-pine"></span>
-<span>8 Mnt RSUD Kepanjen</span>
-</div>
-<div class="flex items-center gap-1.5">
-<span class="w-1 h-1 rounded-full bg-pine"></span>
-<span>Topografi Bebas Banjir</span>
-</div>
-</div>
-</div>
-</section>
-<!-- INSTITUTIONAL TRUST STRIP: BANK REKANAN & LEMBAGA PEMERINTAH -->
-<section class="px-margin text-center">
-<div class="py-4 border-y border-stone-border flex flex-wrap items-center justify-around gap-y-2 text-stone-grey text-[10.5px] font-medium uppercase tracking-wider">
-<span>BANK BTN</span>
-<span class="text-stone-border">•</span>
-<span>BANK MANDIRI</span>
-<span class="text-stone-border">•</span>
-<span>BRI</span>
-<span class="text-stone-border">•</span>
-<span>BSI</span>
-<span class="text-stone-border">•</span>
-<span>BP TAPERA</span>
-<span class="text-stone-border">•</span>
-<span>PUPR RI</span>
-</div>
-</section>
-</main>
-<!-- Editorial Footer -->
-<footer class="w-full bg-stone-sand px-margin py-8 text-center border-t border-stone-border text-stone-grey flex flex-col gap-1.5 pb-28">
-<span class="font-editorial text-[17px] text-charcoal tracking-wide">Citra Griya Panjen</span>
-<p class="text-[11.5px] font-light">Program Perumahan Subsidi Resmi PUPR RI &amp; KPR Bank Rekanan (BTN • Mandiri • BRI • BSI Syariah)</p>
-<p class="text-[10px] text-stone-light mt-2">© 2025 PT Citra Griya Gemilang. Terdaftar resmi di sistem SIRENG PUPR.</p>
-</footer>
-<!-- STICKY BOTTOM FLOATING BAR: ELEGAN, DINAMIS & INTERAKTIF -->
-<aside class="fixed bottom-3 inset-x-3 z-50 max-w-md mx-auto pb-safe">
-<div class="p-2.5 rounded-2xl bg-surface-pure/95 backdrop-blur-xl border border-stone-border/80 shadow-[0_8px_30px_rgba(23,54,39,0.12)] flex items-center justify-between gap-3">
-<div class="flex flex-col pl-2">
-<span class="text-[9.5px] uppercase tracking-wider text-stone-grey font-medium">Pilihan Cicilan Anda</span>
-<div class="flex items-baseline gap-1 leading-none mt-0.5">
-<span class="font-editorial text-[17px] text-charcoal font-medium" id="floating-installment-val">Rp 1.073.571 /bln</span>
-<span class="text-[10px] text-pine font-light">flat</span>
-</div>
-</div>
-<a class="h-10 px-4 rounded-xl bg-pine hover:bg-pine-dark active:scale-95 text-surface-pure text-[12px] font-medium tracking-wide flex items-center gap-1.5 transition-all shadow-sm cursor-pointer" href="#form-kualifikasi" id="floating-action-cta">
-<span id="floating-btn-text">Isi Form Kualifikasi</span>
-<span class="material-symbols-outlined text-[15px]" id="floating-btn-icon">arrow_downward</span>
-</a>
-</div>
-</aside>
-<!-- Interactive Questionnaire & Multi-Step Wizard Script -->
-<script>
-  (function() {
-    function initApp() {
-      const step1 = document.getElementById('wizard-step-1');
-      const step2 = document.getElementById('wizard-step-2');
-      const step3 = document.getElementById('wizard-step-3');
-      const next1 = document.getElementById('btn-wizard-step1-next');
-      const prev2 = document.getElementById('btn-wizard-step2-prev');
-      const next2 = document.getElementById('btn-wizard-step2-next');
-      const prev3 = document.getElementById('btn-wizard-step3-prev');
-      const progressBar = document.getElementById('wizard-progress-bar');
-      const stepCount = document.getElementById('step-indicator-count');
-      const stepTitle = document.getElementById('step-indicator-title');
-      const finalBtn = document.getElementById('btn-final-whatsapp-submit');
-      const nameInput = document.getElementById('wizard-name');
-      const waInput = document.getElementById('wizard-whatsapp');
-      const summaryInstallment = document.getElementById('summary-installment');
-      const summarySchedule = document.getElementById('summary-schedule');
-      const floatingInstallment = document.getElementById('floating-installment-val');
-      const floatingActionCta = document.getElementById('floating-action-cta');
-      const floatingBtnText = document.getElementById('floating-btn-text');
-      const floatingBtnIcon = document.getElementById('floating-btn-icon');
+          <!-- Editorial Typography Headline -->
+          <h1
+            class="font-editorial text-[38px] md:text-[48px] lg:text-[56px] leading-[1.12] tracking-[-0.02em] font-normal text-charcoal mb-3"
+          >
+            Hunian Teduh<br />
+            <span class="italic font-light text-pine">Berkelanjutan.</span>
+          </h1>
+          <p
+            class="text-[14px] leading-relaxed text-stone-grey max-w-[340px] md:max-w-[480px] md:text-[15px] font-light mb-6"
+          >
+            Rumah tapak subsidi modern berstandar resmi PUPR. Arsitektur
+            bernapas, bersertifikat SHM murni, berlatar lingkungan hijau yang
+            sejuk.
+          </p>
+          <div class="lg:hidden">
+            <!-- Architecture Visual Frame -->
+            <div
+              class="relative w-full rounded-[28px] overflow-hidden bg-stone-sand shadow-[0_12px_40px_rgba(23,54,39,0.06)] border border-stone-border/80 aspect-[16/11] mb-5"
+            >
+              <img
+                alt="Arsitektur Citra Griya Panjen Jombang"
+                class="w-full h-full object-cover scale-[1.01] transition-transform duration-700 ease-out"
+                src="https://lh3.googleusercontent.com/aida/ALJJyrDcwKshcqJmxt7yF3yv6pWgp-5mP9vuoQxoSKk8nUnRASVQjdkCXVq7mLan6SxBlwLL2yNX4v6CwBx1AWwzpomqVH7_qxe4zP7_8DOaxV-TSWvTYF4cLe5Fgnzh6rY59cFX8wTZeYHX0Nrl1CtzrIcOhkttzP7r8g-LHEVilK8ADpkSMB9ya3-uIdeTb9TOlJPzt4Rf_cgECb4PYPkMDTnOZLdHwb07IgcsxXtH5dvi"
+              />
+              <!-- Minimal Gradient Sheen -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/10 to-transparent"
+              ></div>
+              <!-- Architectural Pill Overlay (Bottom) -->
+              <div
+                class="absolute bottom-3.5 inset-x-3.5 p-3 rounded-2xl bg-surface-pure/95 backdrop-blur-md border border-white/50 flex items-center justify-between shadow-sm"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="text-[10px] uppercase tracking-[0.16em] text-ochre font-semibold"
+                    >Tipe 30/60 FLPP</span
+                  >
+                  <div class="flex items-baseline gap-1 mt-0.5">
+                    <span
+                      class="font-editorial text-[18px] text-charcoal font-medium"
+                      >Rp 1,07 Jt</span
+                    >
+                    <span class="text-[11px] text-stone-grey font-light"
+                      >/bulan flat</span
+                    >
+                  </div>
+                </div>
+                <div class="text-right">
+                  <span
+                    class="inline-flex items-center gap-1 text-[11px] text-pine font-medium"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-pine"></span>
+                    Resmi SIRENG PUPR
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Action Button: Refined Editorial CTA -->
+          <a
+            class="group w-full md:max-w-md py-4 px-6 rounded-2xl bg-pine hover:bg-pine-dark active:scale-[0.99] text-surface-pure text-[13.5px] tracking-wide font-medium flex items-center justify-between transition-all duration-300 shadow-md"
+            href="#form-kualifikasi"
+          >
+            <span class="tracking-wider">Mulai Kualifikasi Mandiri</span>
+            <div class="flex items-center gap-2">
+              <span class="text-[11px] text-white/60 font-light">30 Detik</span>
+              <span
+                class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1"
+                >arrow_forward</span
+              >
+            </div>
+          </a>
+          <span
+            class="text-center text-[11px] text-stone-light mt-2.5 font-light tracking-wide"
+          >
+            Bebas biaya administrasi konsultasi • Didampingi hingga serah terima
+            kunci
+          </span>
+        </div>
+        <div class="hidden lg:block">
+          <!-- Architecture Visual Frame -->
+          <div
+            class="relative w-full rounded-[28px] overflow-hidden bg-stone-sand shadow-[0_12px_40px_rgba(23,54,39,0.06)] border border-stone-border/80 aspect-[4/3] mb-0"
+          >
+            <img
+              alt="Arsitektur Citra Griya Panjen Jombang"
+              class="w-full h-full object-cover scale-[1.01] transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida/ALJJyrDcwKshcqJmxt7yF3yv6pWgp-5mP9vuoQxoSKk8nUnRASVQjdkCXVq7mLan6SxBlwLL2yNX4v6CwBx1AWwzpomqVH7_qxe4zP7_8DOaxV-TSWvTYF4cLe5Fgnzh6rY59cFX8wTZeYHX0Nrl1CtzrIcOhkttzP7r8g-LHEVilK8ADpkSMB9ya3-uIdeTb9TOlJPzt4Rf_cgECb4PYPkMDTnOZLdHwb07IgcsxXtH5dvi"
+            />
+            <!-- Minimal Gradient Sheen -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/10 to-transparent"
+            ></div>
+            <!-- Architectural Pill Overlay (Bottom) -->
+            <div
+              class="absolute bottom-3.5 inset-x-3.5 p-3 rounded-2xl bg-surface-pure/95 backdrop-blur-md border border-white/50 flex items-center justify-between shadow-sm"
+            >
+              <div class="flex flex-col">
+                <span
+                  class="text-[10px] uppercase tracking-[0.16em] text-ochre font-semibold"
+                  >Tipe 30/60 FLPP</span
+                >
+                <div class="flex items-baseline gap-1 mt-0.5">
+                  <span
+                    class="font-editorial text-[18px] text-charcoal font-medium"
+                    >Rp 1,07 Jt</span
+                  >
+                  <span class="text-[11px] text-stone-grey font-light"
+                    >/bulan flat</span
+                  >
+                </div>
+              </div>
+              <div class="text-right">
+                <span
+                  class="inline-flex items-center gap-1 text-[11px] text-pine font-medium"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-pine"></span>
+                  Resmi SIRENG PUPR
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EDITORIAL HIGHLIGHTS (BENTO GALLERY STYLE) -->
+      <section class="px-margin md:px-8">
+        <div class="flex flex-col mb-4">
+          <span
+            class="text-[10px] uppercase tracking-[0.2em] text-ochre font-semibold"
+            >Nilai Dasar</span
+          >
+          <h2
+            class="font-editorial text-[24px] text-charcoal font-normal mt-0.5"
+          >
+            Esensi Kepemilikan
+          </h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <!-- 01 DP 0% -->
+          <div
+            class="p-4 rounded-2xl bg-surface-pure border border-stone-border/70 flex flex-col justify-between h-[138px]"
+          >
+            <span class="font-editorial text-[13px] text-stone-light"
+              >01 /</span
+            >
+            <div class="flex flex-col">
+              <span
+                class="font-editorial text-[26px] text-pine leading-none font-normal"
+                >0%</span
+              >
+              <span class="text-[12px] font-medium text-charcoal mt-1"
+                >Uang Muka (DP)</span
+              >
+              <span
+                class="text-[10.5px] text-stone-grey leading-tight font-light mt-0.5"
+                >Bebas biaya notaris &amp; BPHTB</span
+              >
+            </div>
+          </div>
+          <!-- 02 Bunga Flat -->
+          <div
+            class="p-4 rounded-2xl bg-surface-pure border border-stone-border/70 flex flex-col justify-between h-[138px]"
+          >
+            <span class="font-editorial text-[13px] text-stone-light"
+              >02 /</span
+            >
+            <div class="flex flex-col">
+              <span
+                class="font-editorial text-[26px] text-ochre leading-none font-normal"
+                >5.0%</span
+              >
+              <span class="text-[12px] font-medium text-charcoal mt-1"
+                >Bunga Terkunci</span
+              >
+              <span
+                class="text-[10.5px] text-stone-grey leading-tight font-light mt-0.5"
+                >Tetap s.d pelunasan 20 thn</span
+              >
+            </div>
+          </div>
+          <!-- 03 Akses -->
+          <div
+            class="p-4 rounded-2xl bg-surface-pure border border-stone-border/70 flex flex-col justify-between h-[138px]"
+          >
+            <span class="font-editorial text-[13px] text-stone-light"
+              >03 /</span
+            >
+            <div class="flex flex-col">
+              <span
+                class="font-editorial text-[26px] text-charcoal leading-none font-normal"
+                >7 Mnt</span
+              >
+              <span class="text-[12px] font-medium text-charcoal mt-1"
+                >Konektivitas Kota</span
+              >
+              <span
+                class="text-[10.5px] text-stone-grey leading-tight font-light mt-0.5"
+                >Stasiun &amp; RSUD terdekat</span
+              >
+            </div>
+          </div>
+          <!-- 04 SHM -->
+          <div
+            class="p-4 rounded-2xl bg-surface-pure border border-stone-border/70 flex flex-col justify-between h-[138px]"
+          >
+            <span class="font-editorial text-[13px] text-stone-light"
+              >04 /</span
+            >
+            <div class="flex flex-col">
+              <span
+                class="font-editorial text-[26px] text-pine leading-none font-normal"
+                >100%</span
+              >
+              <span class="text-[12px] font-medium text-charcoal mt-1"
+                >SHM Murni</span
+              >
+              <span
+                class="text-[10.5px] text-stone-grey leading-tight font-light mt-0.5"
+                >Bukan HGB, sertifikat kavling</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- UNIT ARCHITECTURE SHOWCASE (CATALOGUE) -->
+      <section class="px-margin md:px-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div
+          class="md:col-span-2 flex items-end justify-between border-b border-stone-border pb-3"
+        >
+          <div class="flex flex-col">
+            <span
+              class="text-[10px] uppercase tracking-[0.2em] text-stone-grey font-medium"
+              >Portofolio Denah</span
+            >
+            <h2
+              class="font-editorial text-[24px] text-charcoal font-normal mt-0.5"
+            >
+              Koleksi Tipe Unit
+            </h2>
+          </div>
+          <span class="text-[11px] font-editorial italic text-stone-grey"
+            >Edisi 2025</span
+          >
+        </div>
+        <!-- Unit 1: Tipe 36/66 (FLPP) -->
+        <article
+          class="p-4 rounded-[26px] bg-surface-pure border border-stone-border/80 shadow-[0_4px_24px_rgba(0,0,0,0.02)] flex flex-col gap-4 h-full"
+        >
+          <div
+            class="relative w-full h-48 md:h-64 lg:h-72 rounded-2xl overflow-hidden bg-stone-sand"
+          >
+            <img
+              alt="Fasad Tipe 36 Subsidi Citra Griya"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUAmJEgWLFv9sFAfkSC5Qb5Zv9YzfOzZq-ircPDHqpIbXGykQ13dfXzBUCDBmnywm37eJAjJyqHiUJEx7VMxTlF9kLx6D2BPPaoo8uM5KnkByzTOKMEs4YEAPZ43UeZr4m7hyLfoVHjaE8qUrk_yeeAaGukaymVNWp6c3jljndbiRBnKkjyJpYlJQp0dNeDHNMtVO396M6bCg8g8rmFXNEL-uY0YcW_ga5AifKT_A"
+            />
+            <span
+              class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-pure/90 backdrop-blur-md text-[10px] tracking-wider uppercase font-semibold text-pine border border-stone-border/40"
+            >
+              Alur Subsidi FLPP
+            </span>
+            <span
+              class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-charcoal/80 text-[10px] tracking-wider text-surface-pure font-light"
+            >
+              Sisa 4 Unit
+            </span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <div class="flex items-baseline justify-between">
+              <h3 class="font-editorial text-[20px] text-charcoal">
+                Tipe 30 / 60 — Subsidi
+              </h3>
+              <span class="text-[12px] text-stone-grey font-light"
+                >Rp 166 Jt</span
+              >
+            </div>
+            <p class="text-[12px] text-stone-grey font-light leading-relaxed">
+              Proporsi ideal dengan sirkulasi udara silang, plafon 3.8 meter,
+              dan taman belakang yang fleksibel diperluas.
+            </p>
+          </div>
+          <!-- Architectural Metrics -->
+          <div
+            class="grid grid-cols-3 py-2.5 border-y border-stone-border/60 text-center"
+          >
+            <div
+              class="flex flex-col border-r border-stone-border/60 last:border-0"
+            >
+              <span
+                class="text-[9.5px] uppercase tracking-wider text-stone-light"
+                >Luas</span
+              >
+              <span class="font-editorial text-[15px] text-charcoal mt-0.5"
+                >30/60 m²</span
+              >
+            </div>
+            <div
+              class="flex flex-col border-r border-stone-border/60 last:border-0"
+            >
+              <span
+                class="text-[9.5px] uppercase tracking-wider text-stone-light"
+                >Kamar</span
+              >
+              <span class="font-editorial text-[15px] text-charcoal mt-0.5"
+                >2 Ruang</span
+              >
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="text-[9.5px] uppercase tracking-wider text-stone-light"
+                >Cicilan</span
+              >
+              <span
+                class="font-editorial text-[15px] text-pine font-medium mt-0.5"
+                >1,07 Jt/bln</span
+              >
+            </div>
+          </div>
+          <a
+            class="mt-auto w-full py-3 rounded-xl border border-pine text-pine hover:bg-pine hover:text-surface-pure transition-colors text-center text-[12.5px] font-medium tracking-wide flex items-center justify-center gap-1.5"
+            href="#form-kualifikasi"
+          >
+            <span>Kunci Kuota Tipe 30</span>
+            <span class="material-symbols-outlined text-[16px]"
+              >arrow_downward</span
+            >
+          </a>
+        </article>
+        <!-- Unit 2: Tipe 45/72 (Komersil) -->
+        <article
+          class="p-4 rounded-[26px] bg-surface-pure border border-stone-border/80 shadow-[0_4px_24px_rgba(0,0,0,0.02)] flex flex-col gap-4 h-full"
+        >
+          <div
+            class="relative w-full h-48 md:h-64 lg:h-72 rounded-2xl overflow-hidden bg-stone-sand"
+          >
+            <img
+              alt="Fasad Tipe 45 Komersil Citra Griya"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2b0Cn2DWkS89tkmArtdQ_BUsmi5s9V0CoWy9Oz5SeABRuawN6808Dbi3TE4H-to8LSf0f0NrP9icjQu0J1-RVguMpZ13ptUgfwwuOkNW4GV3XRVR-n9POvifmCNGZTh9ZzLm8jZnrsYNPokRaLijBiJinkgEqwUx0tmyG5OK6ez4JxMr-WKI214A4vVStuqENDrJMX1JnwrcPUhouUMcg6Pn6vQqKrcl33zkzzc4"
+            />
+            <span
+              class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-pure/90 backdrop-blur-md text-[10px] tracking-wider uppercase font-semibold text-ochre border border-stone-border/40"
+            >
+              Seri Komersil Hook
+            </span>
+            <span
+              class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-charcoal/80 text-[10px] tracking-wider text-surface-pure font-light"
+            >
+              Sisa 5 Unit
+            </span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <div class="flex items-baseline justify-between">
+              <h3 class="font-editorial text-[20px] text-charcoal">
+                Tipe 45 / 72 — Komersil
+              </h3>
+              <span class="text-[12px] text-stone-grey font-light"
+                >Rp 300 Jt-an</span
+              >
+            </div>
+            <p class="text-[12px] text-stone-grey font-light leading-relaxed">
+              Fasad lebih lebar dengan dobel carport, plafon sejuk 4.2 meter,
+              dan bukaan cahaya alami melimpah.
+            </p>
+          </div>
+          <!-- Architectural Metrics -->
+          <div
+            class="grid grid-cols-3 py-2.5 border-y border-stone-border/60 text-center"
+          >
+            <div
+              class="flex flex-col border-r border-stone-border/60 last:border-0"
+            >
+              <span
+                class="text-[9.5px] uppercase tracking-wider text-stone-light"
+                >Luas</span
+              >
+              <span class="font-editorial text-[15px] text-charcoal mt-0.5"
+                >45/72 m²</span
+              >
+            </div>
+            <div
+              class="flex flex-col border-r border-stone-border/60 last:border-0"
+            >
+              <span
+                class="text-[9.5px] uppercase tracking-wider text-stone-light"
+                >Carport</span
+              >
+              <span class="font-editorial text-[15px] text-charcoal mt-0.5"
+                >Mobil + Motor</span
+              >
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="text-[9.5px] uppercase tracking-wider text-stone-light"
+                >Cicilan</span
+              >
+              <span
+                class="font-editorial text-[15px] text-ochre font-medium mt-0.5"
+                >2,1 Jt/bln</span
+              >
+            </div>
+          </div>
+          <a
+            class="mt-auto w-full py-3 rounded-xl border border-stone-border text-charcoal hover:bg-stone-sand transition-colors text-center text-[12.5px] font-medium tracking-wide flex items-center justify-center gap-1.5"
+            href="https://wa.me/"
+            id="cta-komersil"
+            rel="noopener"
+            target="_blank"
+          >
+            <span>Detail Spesifikasi Komersil</span>
+            <span class="material-symbols-outlined text-[16px]"
+              >north_east</span
+            >
+          </a>
+        </article>
+      </section>
+      <!-- PRIVATE CONSULTATION & INTERACTIVE QUALIFICATION SECTION -->
+      <section
+        class="px-margin md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 items-start scroll-mt-24"
+        id="form-kualifikasi"
+      >
+        <!-- KARTU CICILAN & SKEMA RESMI PEMERINTAH (FLPP PUPR) -->
+        <div
+          class="p-6 rounded-[28px] bg-surface-pure border border-stone-border shadow-sm flex flex-col gap-5"
+        >
+          <div class="flex flex-col gap-1.5">
+            <div
+              class="flex items-center justify-between text-[11px] uppercase tracking-wider text-stone-grey font-medium"
+            >
+              <span class="flex items-center gap-1.5"
+                ><span class="w-1.5 h-1.5 rounded-full bg-pine"></span>Skema
+                Resmi KPR FLPP</span
+              >
+              <span class="text-ochre font-semibold">Subsidi PUPR 2025</span>
+            </div>
+            <h2 class="font-editorial text-[24px] text-charcoal leading-snug">
+              Tabel Cicilan Resmi Pemerintah
+            </h2>
+            <p class="text-[12px] text-stone-grey font-light leading-relaxed">
+              Transparan tanpa biaya tersembunyi. Suku bunga subsidi tetap 5.0%
+              flat sampai lunas, didukung fasilitas SBUM resmi negara.
+            </p>
+          </div>
+          <!-- Rincian Data KPR Resmi -->
+          <div
+            class="grid grid-cols-2 gap-2.5 p-3.5 rounded-2xl bg-stone-sand/50 border border-stone-border/60 text-[11.5px]"
+          >
+            <div class="flex flex-col">
+              <span
+                class="text-[10px] uppercase tracking-wider text-stone-light"
+                >Harga Jual Resmi</span
+              >
+              <span
+                class="font-editorial text-[16px] text-charcoal font-medium mt-0.5"
+                >Rp 166.000.000</span
+              >
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="text-[10px] uppercase tracking-wider text-stone-light"
+                >Uang Muka KPR</span
+              >
+              <span
+                class="font-editorial text-[16px] text-pine font-medium mt-0.5"
+                >Rp 2.000.000</span
+              >
+            </div>
+            <div class="flex flex-col border-t border-stone-border/40 pt-2">
+              <span
+                class="text-[10px] uppercase tracking-wider text-stone-light"
+                >Bantuan SBUM Negara</span
+              >
+              <span
+                class="font-editorial text-[16px] text-ochre font-medium mt-0.5"
+                >Rp 4.000.000</span
+              >
+            </div>
+            <div class="flex flex-col border-t border-stone-border/40 pt-2">
+              <span
+                class="text-[10px] uppercase tracking-wider text-stone-light"
+                >Pokok Pembiayaan KPR</span
+              >
+              <span
+                class="font-editorial text-[16px] text-charcoal font-medium mt-0.5"
+                >Rp 160.000.000</span
+              >
+            </div>
+          </div>
+          <!-- Keterangan Alur Pilihan Tenor -->
+          <div
+            class="p-3.5 rounded-2xl bg-stone-sand/40 border border-stone-border/60 flex items-start gap-2.5"
+          >
+            <span
+              class="material-symbols-outlined text-[18px] text-pine shrink-0 mt-0.5"
+              >tune</span
+            >
+            <p class="text-[11.5px] text-stone-grey leading-relaxed font-light">
+              <strong class="text-charcoal font-medium"
+                >Simulasi Tenor Fleksibel:</strong
+              >
+              Pilihan tenor resmi (5 hingga 20 tahun) dan nominal angsuran
+              bulanan yang presisi dapat Anda tentukan langsung pada formulir
+              kualifikasi mandiri di bawah ini.
+            </p>
+          </div>
+          <!-- Keamanan Garansi Bank Rekanan Resmi FLPP -->
+          <div
+            class="flex items-center gap-2 text-[11px] text-pine font-medium bg-stone-sand/50 p-2.5 rounded-xl border border-stone-border/40"
+          >
+            <span
+              class="material-symbols-outlined text-[16px] text-pine shrink-0"
+              >verified</span
+            >
+            <span
+              >Bunga Terkunci 5% Flat Didukung Bank Rekanan Resmi FLPP (BTN,
+              Mandiri, BRI, BSI Syariah) &amp; BP Tapera</span
+            >
+          </div>
+        </div>
+        <!-- MULTI-STEP WIZARD FORM (SEAMLESS 3-STEP QUALIFICATION) -->
+        <div
+          class="p-6 rounded-[28px] bg-stone-sand border border-stone-border shadow-sm flex flex-col gap-5"
+        >
+          <!-- Step Indicator & Smooth Progress Bar -->
+          <div class="flex flex-col gap-2">
+            <div
+              class="flex items-center justify-between text-[11px] font-medium text-stone-grey"
+            >
+              <span class="uppercase tracking-wider" id="step-indicator-title"
+                >Langkah 1: Kenyamanan Cicilan</span
+              >
+              <span class="text-pine font-semibold" id="step-indicator-count"
+                >1 dari 3</span
+              >
+            </div>
+            <div
+              class="w-full h-1.5 bg-stone-border/60 rounded-full overflow-hidden"
+            >
+              <div
+                class="h-full bg-pine transition-all duration-300 rounded-full"
+                id="wizard-progress-bar"
+                style="width: 33.33%"
+              ></div>
+            </div>
+          </div>
+          <!-- STEP 1: KENYAMANAN CICILAN -->
+          <div class="flex flex-col gap-4" id="wizard-step-1">
+            <div class="flex flex-col gap-1">
+              <h3 class="font-editorial text-[20px] text-charcoal font-normal">
+                Pilih Kenyamanan Cicilan Anda
+              </h3>
+              <p
+                class="text-[11.5px] text-stone-grey font-light leading-relaxed"
+              >
+                Tentukan estimasi alokasi angsuran bulanan resmi yang paling
+                realistis bagi keuangan Anda.
+              </p>
+            </div>
+            <div class="grid grid-cols-2 gap-2.5">
+              <!-- Tenor 20 Thn -->
+              <label
+                class="tenor-option p-3 rounded-xl bg-surface-pure border-2 border-pine flex flex-col cursor-pointer transition-all has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60 relative"
+              >
+                <span
+                  class="absolute -top-2 right-2 px-1.5 py-0.2 rounded-full bg-pine text-[8.5px] uppercase tracking-wider font-semibold text-surface-pure"
+                >
+                  Paling Diminati
+                </span>
+                <div class="flex items-center justify-between mt-0.5">
+                  <span
+                    class="text-[10px] font-semibold text-pine uppercase tracking-wider"
+                    >Tenor 20 Th</span
+                  >
+                  <input
+                    checked=""
+                    class="w-4 h-4 accent-pine"
+                    data-nominal="Rp 1.073.571 /bln"
+                    name="wizard_installment"
+                    type="radio"
+                    value="Rp 1.073.571 /bln (20 Tahun)"
+                  />
+                </div>
+                <span
+                  class="font-editorial text-[17px] text-charcoal font-medium mt-1"
+                  >Rp 1.073.571</span
+                >
+                <span class="text-[10px] text-stone-grey font-light"
+                  >/bulan flat</span
+                >
+              </label>
+              <!-- Tenor 15 Thn -->
+              <label
+                class="tenor-option p-3 rounded-xl bg-surface-pure border border-stone-border/80 flex flex-col cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-[10px] font-semibold text-stone-grey uppercase tracking-wider"
+                    >Tenor 15 Th</span
+                  >
+                  <input
+                    class="w-4 h-4 accent-pine"
+                    data-nominal="Rp 1.299.590 /bln"
+                    name="wizard_installment"
+                    type="radio"
+                    value="Rp 1.299.590 /bln (15 Tahun)"
+                  />
+                </div>
+                <span
+                  class="font-editorial text-[17px] text-charcoal font-medium mt-1"
+                  >Rp 1.299.590</span
+                >
+                <span class="text-[10px] text-stone-grey font-light"
+                  >/bulan flat</span
+                >
+              </label>
+              <!-- Tenor 10 Thn -->
+              <label
+                class="tenor-option p-3 rounded-xl bg-surface-pure border border-stone-border/80 flex flex-col cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-[10px] font-semibold text-stone-grey uppercase tracking-wider"
+                    >Tenor 10 Th</span
+                  >
+                  <input
+                    class="w-4 h-4 accent-pine"
+                    data-nominal="Rp 1.743.081 /bln"
+                    name="wizard_installment"
+                    type="radio"
+                    value="Rp 1.743.081 /bln (10 Tahun)"
+                  />
+                </div>
+                <span
+                  class="font-editorial text-[17px] text-charcoal font-medium mt-1"
+                  >Rp 1.743.081</span
+                >
+                <span class="text-[10px] text-stone-grey font-light"
+                  >/bulan flat</span
+                >
+              </label>
+              <!-- Tenor 5 Thn -->
+              <label
+                class="tenor-option p-3 rounded-xl bg-surface-pure border border-stone-border/80 flex flex-col cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-[10px] font-semibold text-ochre uppercase tracking-wider"
+                    >Tenor 5 Th</span
+                  >
+                  <input
+                    class="w-4 h-4 accent-pine"
+                    data-nominal="Rp 3.019.397 /bln"
+                    name="wizard_installment"
+                    type="radio"
+                    value="Rp 3.019.397 /bln (5 Tahun)"
+                  />
+                </div>
+                <span
+                  class="font-editorial text-[17px] text-charcoal font-medium mt-1"
+                  >Rp 3.019.397</span
+                >
+                <span class="text-[10px] text-stone-grey font-light"
+                  >/bulan flat</span
+                >
+              </label>
+            </div>
+            <button
+              class="w-full py-3.5 px-5 rounded-2xl bg-pine hover:bg-pine-dark text-surface-pure text-[13px] font-medium tracking-wide flex items-center justify-center gap-2 transition-all shadow-md mt-1 cursor-pointer"
+              id="btn-wizard-step1-next"
+              type="button"
+            >
+              <span>Lanjut ke Jadwal Survei</span>
+              <span class="material-symbols-outlined text-[16px]"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+          <!-- STEP 2: RENCANA JADWAL SURVEI -->
+          <div class="hidden flex flex-col gap-4" id="wizard-step-2">
+            <div class="flex flex-col gap-1">
+              <h3 class="font-editorial text-[20px] text-charcoal font-normal">
+                Rencana Jadwal Kunjungan
+              </h3>
+              <p
+                class="text-[11.5px] text-stone-grey font-light leading-relaxed"
+              >
+                Tentukan rentang waktu yang paling santai agar tim konsultan
+                kami dapat mendampingi ke lokasi kavling.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <!-- Opsi 1: Pekan Ini (1–7 Hari ke Depan) -->
+              <label
+                class="p-3 rounded-xl bg-surface-pure border-2 border-pine flex items-center justify-between cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-[18px] text-pine"
+                    >calendar_today</span
+                  >
+                  <div class="flex flex-col">
+                    <span class="text-[12.5px] font-medium text-charcoal"
+                      >Pekan Ini (1–7 Hari ke Depan)</span
+                    >
+                    <span class="text-[10px] text-stone-grey font-light"
+                      >Prioritas pendampingan &amp; cek fisik unit</span
+                    >
+                  </div>
+                </div>
+                <input
+                  checked=""
+                  class="w-4 h-4 accent-pine"
+                  name="wizard_schedule"
+                  type="radio"
+                  value="Pekan Ini (1–7 Hari ke Depan)"
+                />
+              </label>
+              <!-- Opsi 2: Bulan Ini (Dalam 30 Hari) -->
+              <label
+                class="p-3 rounded-xl bg-surface-pure border border-stone-border/80 flex items-center justify-between cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-[18px] text-pine"
+                    >calendar_month</span
+                  >
+                  <div class="flex flex-col">
+                    <span class="text-[12.5px] font-medium text-charcoal"
+                      >Bulan Ini (Dalam 30 Hari)</span
+                    >
+                    <span class="text-[10px] text-stone-grey font-light"
+                      >Pencocokan waktu cuti atau gajian</span
+                    >
+                  </div>
+                </div>
+                <input
+                  class="w-4 h-4 accent-pine"
+                  name="wizard_schedule"
+                  type="radio"
+                  value="Bulan Ini (Dalam 30 Hari)"
+                />
+              </label>
+              <!-- Opsi 3: 2–3 Bulan ke Depan -->
+              <label
+                class="p-3 rounded-xl bg-surface-pure border border-stone-border/80 flex items-center justify-between cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-[18px] text-pine"
+                    >date_range</span
+                  >
+                  <div class="flex flex-col">
+                    <span class="text-[12.5px] font-medium text-charcoal"
+                      >Beberapa Bulan Lagi (2–3 Bulan ke Depan)</span
+                    >
+                    <span class="text-[10px] text-stone-grey font-light"
+                      >Rencana persiapan dana &amp; berkas bertahap</span
+                    >
+                  </div>
+                </div>
+                <input
+                  class="w-4 h-4 accent-pine"
+                  name="wizard_schedule"
+                  type="radio"
+                  value="2–3 Bulan ke Depan"
+                />
+              </label>
+              <!-- Opsi 4: Belum Pasti / Ingin Tanya-Tanya Dulu via WhatsApp -->
+              <label
+                class="p-3 rounded-xl bg-surface-pure border border-stone-border/80 flex items-center justify-between cursor-pointer transition-all hover:border-pine has-[:checked]:border-pine has-[:checked]:bg-stone-sand/60"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-[18px] text-pine"
+                    >chat</span
+                  >
+                  <div class="flex flex-col">
+                    <span class="text-[12.5px] font-medium text-charcoal"
+                      >Belum Pasti / Ingin Tanya-Tanya Dulu via WhatsApp</span
+                    >
+                    <span class="text-[10px] text-stone-grey font-light"
+                      >Diskusi santai dan unduh denah/spesifikasi</span
+                    >
+                  </div>
+                </div>
+                <input
+                  class="w-4 h-4 accent-pine"
+                  name="wizard_schedule"
+                  type="radio"
+                  value="Belum Pasti / Ingin Tanya-Tanya Dulu via WhatsApp"
+                />
+              </label>
+            </div>
+            <div class="flex items-center gap-2 mt-1">
+              <button
+                class="py-3.5 px-4 rounded-2xl border border-stone-border bg-surface-pure text-stone-grey hover:text-pine text-[12.5px] font-medium transition-all cursor-pointer"
+                id="btn-wizard-step2-prev"
+                type="button"
+              >
+                Kembali
+              </button>
+              <button
+                class="flex-1 py-3.5 px-5 rounded-2xl bg-pine hover:bg-pine-dark text-surface-pure text-[13px] font-medium tracking-wide flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer"
+                id="btn-wizard-step2-next"
+                type="button"
+              >
+                <span>Lanjut ke Langkah Terakhir</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </div>
+          <!-- STEP 3: DATA KONFIRMASI PENGUNCIAN KUOTA -->
+          <div class="hidden flex flex-col gap-4" id="wizard-step-3">
+            <div class="flex flex-col gap-1">
+              <h3 class="font-editorial text-[20px] text-charcoal font-normal">
+                Verifikasi Berkas &amp; Kuota
+              </h3>
+              <p
+                class="text-[11.5px] text-stone-grey font-light leading-relaxed"
+              >
+                Masukkan data kontak untuk menerima rincian jadwal survei dan
+                konfirmasi berkas FLPP langsung via WhatsApp.
+              </p>
+            </div>
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-col gap-1">
+                <label
+                  class="text-[11px] uppercase tracking-wider text-stone-grey font-medium"
+                  for="wizard-name"
+                  >Nama Lengkap</label
+                >
+                <input
+                  class="w-full px-3.5 py-3 rounded-xl border border-stone-border bg-surface-pure text-[13px] text-charcoal focus:border-pine focus:outline-none"
+                  id="wizard-name"
+                  placeholder="Contoh: Bpk. Kurniawan"
+                  type="text"
+                  autocomplete="name"
+                />
+                <p
+                  class="hidden text-[11px] text-red-600"
+                  id="wizard-name-error"
+                >
+                  Mohon isi nama lengkap terlebih dahulu.
+                </p>
+              </div>
+              <div class="flex flex-col gap-1">
+                <label
+                  class="text-[11px] uppercase tracking-wider text-stone-grey font-medium"
+                  for="wizard-whatsapp"
+                  >Nomor WhatsApp Aktif</label
+                >
+                <input
+                  class="w-full px-3.5 py-3 rounded-xl border border-stone-border bg-surface-pure text-[13px] text-charcoal focus:border-pine focus:outline-none"
+                  id="wizard-whatsapp"
+                  placeholder="08xxxxxxxxxx"
+                  type="tel"
+                  inputmode="tel"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+            <!-- Summary Ringkas Kuota -->
+            <div
+              class="p-3 rounded-xl bg-surface-pure border border-stone-border/60 flex flex-col gap-1 text-[11px]"
+            >
+              <div class="flex items-center justify-between text-stone-grey">
+                <span>Unit:</span>
+                <span class="font-medium text-charcoal"
+                  >Tipe 30/60 FLPP (Subsidi)</span
+                >
+              </div>
+              <div class="flex items-center justify-between text-stone-grey">
+                <span>Pilihan Tenor:</span>
+                <span class="font-medium text-pine" id="summary-installment"
+                  >Rp 1.073.571 / bln (20 Th)</span
+                >
+              </div>
+              <div class="flex items-center justify-between text-stone-grey">
+                <span>Rencana Survei:</span>
+                <span class="font-medium text-charcoal" id="summary-schedule"
+                  >Pekan Ini (1–7 Hari ke Depan)</span
+                >
+              </div>
+            </div>
+            <!-- 1 CALL TO ACTION (CTA) FINAL PENENTU -->
+            <div class="flex items-center gap-2 mt-1">
+              <button
+                class="py-3.5 px-4 rounded-2xl border border-stone-border bg-surface-pure text-stone-grey hover:text-pine text-[12.5px] font-medium transition-all cursor-pointer"
+                id="btn-wizard-step3-prev"
+                type="button"
+              >
+                Kembali
+              </button>
+              <a
+                class="flex-1 py-4 px-4 rounded-2xl bg-pine hover:bg-pine-dark text-surface-pure text-[12.5px] font-medium tracking-wide flex items-center justify-center gap-2 transition-all shadow-md"
+                href="https://wa.me/"
+                id="btn-final-whatsapp-submit"
+                rel="noopener"
+                target="_blank"
+              >
+                <span class="material-symbols-outlined text-[17px]"
+                  >verified</span
+                >
+                <span class="text-center leading-snug"
+                  >Kirim Jadwal Survei &amp; Dapatkan Brosur Resmi</span
+                >
+              </a>
+            </div>
+          </div>
+          <span class="text-center text-[10px] text-stone-light font-light">
+            Data Anda aman • Tanpa perantara calo • Konsultasi didampingi legal
+            resmi Citra Griya
+          </span>
+        </div>
+      </section>
+      <!-- SYARAT BERKAS DOKUMEN PENGAJUAN SUBSIDI (RESMI PUPR & BANK MITRA) -->
+      <section
+        class="px-margin md:px-8 flex flex-col gap-4 w-full lg:max-w-4xl lg:mx-auto"
+      >
+        <div
+          class="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-ochre font-semibold"
+        >
+          <div class="flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-ochre"></span>
+            <span>Panduan Dokumen KPR FLPP</span>
+          </div>
+          <span class="text-stone-grey text-[9.5px]"
+            >BTN • Mandiri • BRI • BSI</span
+          >
+        </div>
+        <h2 class="font-editorial text-[24px] text-charcoal font-normal mt-0.5">
+          Syarat Berkas Pengajuan Subsidi
+        </h2>
+        <p class="text-[12px] text-stone-grey font-light leading-relaxed mt-1">
+          Tabel ringkas resmi — berlaku untuk Karyawan &amp; Pengusaha /
+          Wiraswasta sesuai standardisasi perbankan nasional rekanan FLPP.
+        </p>
+        <!-- Kartu Tabel Rinci Editorial Japandi -->
+        <div
+          class="rounded-[26px] bg-surface-pure border border-stone-border/80 shadow-[0_4px_24px_rgba(0,0,0,0.02)] overflow-hidden"
+        >
+          <!-- 1. BERKAS UMUM (WAJIB SEMUA) -->
+          <div class="border-b border-stone-border/70">
+            <div
+              class="bg-stone-sand/60 px-4 py-2.5 flex items-center justify-between"
+            >
+              <span
+                class="text-[11px] font-semibold uppercase tracking-wider text-charcoal flex items-center gap-1.5"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-pine"></span>
+                1. Berkas Umum (Wajib Semua)
+              </span>
+              <span
+                class="text-[9.5px] uppercase tracking-wider font-medium text-pine bg-surface-pure px-2 py-0.5 rounded-full border border-stone-border/60"
+                >Wajib Ada</span
+              >
+            </div>
+            <div class="divide-y divide-stone-border/50 text-[12px]">
+              <div class="p-3 px-4 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="font-editorial text-stone-light text-[13px] w-4"
+                    >01</span
+                  >
+                  <span class="text-charcoal font-medium">FC KTP Pemohon</span>
+                </div>
+                <span
+                  class="text-[11px] font-medium text-pine flex items-center gap-1"
+                >
+                  <span class="material-symbols-outlined text-[15px]"
+                    >check_circle</span
+                  >
+                  Karyawan &amp; Usaha
+                </span>
+              </div>
+              <div class="p-3 px-4 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="font-editorial text-stone-light text-[13px] w-4"
+                    >02</span
+                  >
+                  <span class="text-charcoal font-medium"
+                    >FC Kartu Keluarga (KK)</span
+                  >
+                </div>
+                <span
+                  class="text-[11px] font-medium text-pine flex items-center gap-1"
+                >
+                  <span class="material-symbols-outlined text-[15px]"
+                    >check_circle</span
+                  >
+                  Karyawan &amp; Usaha
+                </span>
+              </div>
+              <div class="p-3 px-4 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="font-editorial text-stone-light text-[13px] w-4"
+                    >03</span
+                  >
+                  <span class="text-charcoal font-medium"
+                    >Pas Foto 4x6 (3 Lembar)</span
+                  >
+                </div>
+                <span
+                  class="text-[11px] font-medium text-pine flex items-center gap-1"
+                >
+                  <span class="material-symbols-outlined text-[15px]"
+                    >check_circle</span
+                  >
+                  Karyawan &amp; Usaha
+                </span>
+              </div>
+              <div class="p-3 px-4 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="font-editorial text-stone-light text-[13px] w-4"
+                    >04</span
+                  >
+                  <span class="text-charcoal font-medium">NPWP Pemohon</span>
+                </div>
+                <span
+                  class="text-[11px] font-medium text-pine flex items-center gap-1"
+                >
+                  <span class="material-symbols-outlined text-[15px]"
+                    >check_circle</span
+                  >
+                  Karyawan &amp; Usaha
+                </span>
+              </div>
+              <div class="p-3 px-4 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="font-editorial text-stone-light text-[13px] w-4"
+                    >05</span
+                  >
+                  <span class="text-charcoal font-medium"
+                    >Surat Ket. Belum Punya Rumah</span
+                  >
+                </div>
+                <span class="text-[10px] text-stone-grey font-light"
+                  >Dari Desa / Kelurahan</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- 2. SESUAI PEKERJAAN (KOMPARASI KARYAWAN & WIRASWASTA) -->
+          <div class="border-b border-stone-border/70">
+            <div
+              class="bg-stone-sand/60 px-4 py-2.5 flex items-center justify-between"
+            >
+              <span
+                class="text-[11px] font-semibold uppercase tracking-wider text-charcoal flex items-center gap-1.5"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-ochre"></span>
+                2. Berkas Sesuai Pekerjaan
+              </span>
+              <span
+                class="text-[9.5px] uppercase tracking-wider font-medium text-stone-grey bg-surface-pure px-2 py-0.5 rounded-full border border-stone-border/60"
+                >Pilih Salah Satu</span
+              >
+            </div>
+            <!-- TABEL KOMPARASI DUA KOLOM -->
+            <div class="grid grid-cols-2 divide-x divide-stone-border/70">
+              <!-- Karyawan -->
+              <div class="p-3.5 flex flex-col gap-2.5">
+                <div
+                  class="flex items-center gap-1.5 border-b border-stone-border/50 pb-2"
+                >
+                  <span class="material-symbols-outlined text-[15px] text-pine"
+                    >badge</span
+                  >
+                  <span class="text-[11.5px] font-semibold text-charcoal"
+                    >Karyawan</span
+                  >
+                </div>
+                <ul
+                  class="flex flex-col gap-2 text-[11px] text-stone-grey font-light"
+                >
+                  <li class="flex items-start gap-1.5">
+                    <span
+                      class="material-symbols-outlined text-[14px] text-pine shrink-0 mt-0.5"
+                      >check</span
+                    >
+                    <span>Surat Keterangan Kerja (SK Kerja Aktif)</span>
+                  </li>
+                  <li class="flex items-start gap-1.5">
+                    <span
+                      class="material-symbols-outlined text-[14px] text-pine shrink-0 mt-0.5"
+                      >check</span
+                    >
+                    <span>Slip Gaji 3 Bulan Terakhir</span>
+                  </li>
+                  <li class="flex items-start gap-1.5">
+                    <span
+                      class="material-symbols-outlined text-[14px] text-pine shrink-0 mt-0.5"
+                      >check</span
+                    >
+                    <span>Cetak Rekening Koran 3 Bulan Terakhir</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Pengusaha / Wiraswasta -->
+              <div class="p-3.5 flex flex-col gap-2.5 bg-stone-sand/20">
+                <div
+                  class="flex items-center gap-1.5 border-b border-stone-border/50 pb-2"
+                >
+                  <span class="material-symbols-outlined text-[15px] text-ochre"
+                    >storefront</span
+                  >
+                  <span class="text-[11.5px] font-semibold text-charcoal"
+                    >Wiraswasta / Usaha</span
+                  >
+                </div>
+                <ul
+                  class="flex flex-col gap-2 text-[11px] text-stone-grey font-light"
+                >
+                  <li class="flex items-start gap-1.5">
+                    <span
+                      class="material-symbols-outlined text-[14px] text-ochre shrink-0 mt-0.5"
+                      >check</span
+                    >
+                    <span>Surat Keterangan Usaha (SKU) Desa</span>
+                  </li>
+                  <li class="flex items-start gap-1.5">
+                    <span
+                      class="material-symbols-outlined text-[14px] text-ochre shrink-0 mt-0.5"
+                      >check</span
+                    >
+                    <span>Laporan Pembukuan Usaha 6 Bulan</span>
+                  </li>
+                  <li class="flex items-start gap-1.5">
+                    <span
+                      class="material-symbols-outlined text-[14px] text-ochre shrink-0 mt-0.5"
+                      >check</span
+                    >
+                    <span>Foto Tampak Depan &amp; Aktivitas Usaha</span>
+                  </li>
+                  <li class="flex items-start gap-1.5">
+                    <span
+                      class="material-symbols-outlined text-[14px] text-ochre shrink-0 mt-0.5"
+                      >check</span
+                    >
+                    <span>Cetak Rekening Koran 6 Bulan Terakhir</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- 3. STATUS PERNIKAHAN -->
+          <div>
+            <div
+              class="bg-stone-sand/60 px-4 py-2.5 flex items-center justify-between"
+            >
+              <span
+                class="text-[11px] font-semibold uppercase tracking-wider text-charcoal flex items-center gap-1.5"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-stone-grey"></span>
+                3. Tambahan Sesuai Status Pernikahan
+              </span>
+            </div>
+            <div
+              class="grid grid-cols-2 divide-x divide-stone-border/70 p-3.5 text-[11px]"
+            >
+              <div class="pr-2 flex flex-col gap-1.5">
+                <span class="font-medium text-charcoal text-[11.5px]"
+                  >Sudah Menikah:</span
+                >
+                <span class="text-stone-grey font-light"
+                  >• FC KTP Suami &amp; Istri</span
+                >
+                <span class="text-stone-grey font-light"
+                  >• FC Buku Nikah / Akta Cerai</span
+                >
+                <span class="text-stone-grey font-light"
+                  >• Surat Ket. Belum Miliki Rumah (Keduanya)</span
+                >
+              </div>
+              <div class="pl-3 flex flex-col gap-1.5">
+                <span class="font-medium text-charcoal text-[11.5px]"
+                  >Belum Menikah:</span
+                >
+                <span class="text-stone-grey font-light"
+                  >• Surat Keterangan Belum Menikah dari Desa / Kelurahan</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- JAMINAN PENDAMPINGAN LEGAL -->
+          <div
+            class="p-3.5 bg-stone-sand/60 border-t border-stone-border/80 flex items-center gap-2.5"
+          >
+            <span
+              class="material-symbols-outlined text-[18px] text-pine shrink-0"
+              >support_agent</span
+            >
+            <p class="text-[11px] text-stone-grey leading-tight font-light">
+              <strong class="text-charcoal font-medium"
+                >Pendampingan Penuh:</strong
+              >
+              Belum memiliki SKU atau butuh format surat desa? Tim legal kami
+              mendampingi penyusunan berkas hingga terbit SP3K resmi Bank
+              rekanan.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- RESIDENTIAL TESTIMONIALS (EDITORIAL INTERVIEW QUOTES) -->
+      <section class="px-margin md:px-8 flex flex-col gap-4">
+        <div class="flex items-baseline justify-between">
+          <div class="flex flex-col">
+            <span
+              class="text-[10px] uppercase tracking-[0.2em] text-stone-grey font-medium"
+              >Kisah Nyata</span
+            >
+            <h3
+              class="font-editorial text-[22px] text-charcoal font-normal mt-0.5"
+            >
+              Warga Citra Griya
+            </h3>
+          </div>
+          <span class="text-[11px] font-editorial italic text-stone-grey"
+            >140+ Keluarga</span
+          >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <!-- Quote 1 -->
+          <blockquote
+            class="p-5 rounded-2xl bg-surface-pure border border-stone-border/70 flex flex-col gap-3"
+          >
+            <p
+              class="font-editorial italic text-[15px] leading-relaxed text-charcoal"
+            >
+              “Sebagai karyawan kontrak pabrik gula, saya sempat pasrah tidak
+              bisa lolos KPR bank. Tim Citra Griya memandu berkas sampai tuntas.
+              Sekarang setiap pagi buka pintu langsung udara sejuk dan suasana
+              hijau.”
+            </p>
+            <div
+              class="flex items-center justify-between pt-2 border-t border-stone-border/50 text-[11px]"
+            >
+              <span class="font-medium text-charcoal"
+                >Bpk. Prasetyo &amp; Istri</span
+              >
+              <span class="text-stone-light">Warga Blok D</span>
+            </div>
+          </blockquote>
+          <!-- Quote 2 -->
+          <blockquote
+            class="p-5 rounded-2xl bg-surface-pure border border-stone-border/70 flex flex-col gap-3"
+          >
+            <p
+              class="font-editorial italic text-[15px] leading-relaxed text-charcoal"
+            >
+              “Cicilannya sejuta sebulan, sama seperti biaya sewa rumah petak
+              sewaan saya dulu. Lingkungannya tenang, jalan paving lebar,
+              anak-anak aman main sepeda di depan rumah.”
+            </p>
+            <div
+              class="flex items-center justify-between pt-2 border-t border-stone-border/50 text-[11px]"
+            >
+              <span class="font-medium text-charcoal">Ibu Dina Novita</span>
+              <span class="text-stone-light">Wirausaha Mandiri</span>
+            </div>
+          </blockquote>
+        </div>
+      </section>
+      <!-- LOCATION & CONVENIENCE -->
+      <section class="px-margin md:px-8">
+        <div
+          class="p-5 rounded-[26px] bg-surface-pure border border-stone-border/80 flex flex-col gap-3.5"
+        >
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[18px] text-pine"
+                >location_on</span
+              >
+              <h4 class="font-editorial text-[18px] text-charcoal">
+                Panjen, Jombang
+              </h4>
+            </div>
+            <span class="text-[11px] text-stone-grey font-light"
+              >Akses Aspal 7m</span
+            >
+          </div>
+          <a
+            aria-label="Buka lokasi di Google Maps"
+            class="group block w-full h-36 md:h-64 rounded-xl overflow-hidden relative shadow-inner bg-stone-sand"
+            href="https://maps.app.goo.gl/DTFqtYt8L1Ap6gn16"
+            rel="noopener"
+            target="_blank"
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBUrBWu3gUf6R7rmXAQqTmWhQI2rtd2aw2iv6cj0baX5QYzwVSIoYc9JIwVHqanxGwBgDt4HedpF8BAJ_kYftmXaQR1gDv96VDfMJZIO8QGhqo1hkWJrs5vhBaOpJot1WGYv6Qt0-kol-xkYTfKpbzG1NrChj6steqf0mIsLzx2lms6Wu_wixg3MF68WX8PXQxkI7wutBy_8xEm-aeJE67CnWFOADn7KsU9svfZ608&quot;);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="absolute inset-0 bg-charcoal/15"></div>
+            <div
+              class="absolute bottom-2.5 left-2.5 px-3 py-1 rounded-full bg-surface-pure/90 backdrop-blur-md text-[10.5px] font-medium text-charcoal border border-stone-border/50"
+            >
+              Jalan Lingkungan Paving Rapi
+            </div>
+            <div
+              class="absolute top-2.5 right-2.5 px-3 py-1 rounded-full bg-pine text-white text-[10.5px] font-medium flex items-center gap-1 group-hover:bg-pine-dark transition-colors"
+            >
+              <span class="material-symbols-outlined text-[14px]">map</span>
+              <span>Buka di Google Maps</span>
+            </div>
+          </a>
+          <div
+            class="grid grid-cols-2 gap-y-2 gap-x-3 pt-1 text-[11.5px] text-stone-grey font-light"
+          >
+            <div class="flex items-center gap-1.5">
+              <span class="w-1 h-1 rounded-full bg-pine"></span>
+              <span>5 Mnt dari Jalan Utama</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-1 h-1 rounded-full bg-pine"></span>
+              <span>7 Mnt Stasiun Terdekat</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-1 h-1 rounded-full bg-pine"></span>
+              <span>8 Mnt RSUD Terdekat</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-1 h-1 rounded-full bg-pine"></span>
+              <span>Topografi Bebas Banjir</span>
+            </div>
+          </div>
+          <a
+            class="w-full py-3 rounded-xl border border-pine text-pine hover:bg-pine hover:text-surface-pure transition-colors text-center text-[12.5px] font-medium tracking-wide flex items-center justify-center gap-1.5"
+            href="https://maps.app.goo.gl/DTFqtYt8L1Ap6gn16"
+            rel="noopener"
+            target="_blank"
+          >
+            <span class="material-symbols-outlined text-[16px]"
+              >directions</span
+            >
+            <span>Petunjuk Arah via Google Maps</span>
+          </a>
+        </div>
+      </section>
+      <!-- INSTITUTIONAL TRUST STRIP: BANK REKANAN & LEMBAGA PEMERINTAH -->
+      <section class="px-margin md:px-8 text-center">
+        <div
+          class="py-4 border-y border-stone-border flex flex-wrap items-center justify-around gap-y-2 text-stone-grey text-[10.5px] font-medium uppercase tracking-wider"
+        >
+          <span>BANK BTN</span>
+          <span class="text-stone-border">•</span>
+          <span>BANK MANDIRI</span>
+          <span class="text-stone-border">•</span>
+          <span>BRI</span>
+          <span class="text-stone-border">•</span>
+          <span>BSI</span>
+          <span class="text-stone-border">•</span>
+          <span>BP TAPERA</span>
+          <span class="text-stone-border">•</span>
+          <span>PUPR RI</span>
+        </div>
+      </section>
+    </main>
+    <!-- Editorial Footer -->
+    <footer
+      class="w-full bg-stone-sand px-margin md:px-8 py-8 text-center border-t border-stone-border text-stone-grey flex flex-col gap-1.5 pb-28"
+    >
+      <span class="font-editorial text-[17px] text-charcoal tracking-wide"
+        >Citra Griya Panjen</span
+      >
+      <p class="text-[11.5px] font-light">
+        Program Perumahan Subsidi Resmi PUPR RI &amp; KPR Bank Rekanan (BTN •
+        Mandiri • BRI • BSI Syariah)
+      </p>
+      <p class="text-[10px] text-stone-light mt-2">
+        © 2025 PT Citra Griya Gemilang. Terdaftar resmi di sistem SIRENG PUPR.
+      </p>
+    </footer>
+    <!-- STICKY BOTTOM FLOATING BAR: ELEGAN, DINAMIS & INTERAKTIF -->
+    <aside class="fixed bottom-3 inset-x-3 z-50 max-w-md mx-auto pb-safe">
+      <div
+        class="p-2.5 rounded-2xl bg-surface-pure/95 backdrop-blur-xl border border-stone-border/80 shadow-[0_8px_30px_rgba(23,54,39,0.12)] flex items-center justify-between gap-3"
+      >
+        <div class="flex flex-col pl-2">
+          <span
+            class="text-[9.5px] uppercase tracking-wider text-stone-grey font-medium"
+            >Pilihan Cicilan Anda</span
+          >
+          <div class="flex items-baseline gap-1 leading-none mt-0.5">
+            <span
+              class="font-editorial text-[17px] text-charcoal font-medium"
+              id="floating-installment-val"
+              >Rp 1.073.571 /bln</span
+            >
+            <span class="text-[10px] text-pine font-light">flat</span>
+          </div>
+        </div>
+        <a
+          class="h-10 px-4 rounded-xl bg-pine hover:bg-pine-dark active:scale-95 text-surface-pure text-[12px] font-medium tracking-wide flex items-center gap-1.5 transition-all shadow-sm cursor-pointer"
+          href="#form-kualifikasi"
+          id="floating-action-cta"
+        >
+          <span id="floating-btn-text">Isi Form Kualifikasi</span>
+          <span
+            class="material-symbols-outlined text-[15px]"
+            id="floating-btn-icon"
+            >arrow_downward</span
+          >
+        </a>
+      </div>
+    </aside>
+    <!-- Interactive Questionnaire & Multi-Step Wizard Script -->
+    <script>
+      (function () {
+        // ===== KONFIGURASI =====
+        // Isi nomor WhatsApp admin/marketing (format internasional, tanpa + / spasi). Contoh: '6281234567890'
+        // Jika dikosongkan, WhatsApp akan membuka pilihan kontak (cukup untuk demo).
+        var WA_NUMBER = "";
+        // =======================
 
-      let currentStep = 1;
+        var $ = function (id) {
+          return document.getElementById(id);
+        };
 
-      function updateBottomBarState() {
-        if (!floatingActionCta || !floatingBtnText || !floatingBtnIcon) return;
-        if (currentStep === 3) {
-          floatingBtnText.textContent = "Kirim ke WhatsApp";
-          floatingBtnIcon.textContent = "chat";
-          floatingActionCta.href = finalBtn ? finalBtn.href : "https://wa.me/?text=Halo%20Citra%20Griya%20Panjen";
-          floatingActionCta.setAttribute('target', '_blank');
+        function waUrl(text) {
+          var n = String(WA_NUMBER).replace(/\D/g, "");
+          return "https://wa.me/" + n + "?text=" + encodeURIComponent(text);
+        }
+
+        function initApp() {
+          var steps = {
+            1: $("wizard-step-1"),
+            2: $("wizard-step-2"),
+            3: $("wizard-step-3"),
+          };
+          var progressBar = $("wizard-progress-bar");
+          var stepCount = $("step-indicator-count");
+          var stepTitle = $("step-indicator-title");
+          var finalBtn = $("btn-final-whatsapp-submit");
+          var nameInput = $("wizard-name");
+          var nameError = $("wizard-name-error");
+          var waInput = $("wizard-whatsapp");
+          var summaryInstallment = $("summary-installment");
+          var summarySchedule = $("summary-schedule");
+          var floatingInstallment = $("floating-installment-val");
+          var floatingCta = $("floating-action-cta");
+          var floatingText = $("floating-btn-text");
+          var floatingIcon = $("floating-btn-icon");
+          var komersilBtn = $("cta-komersil");
+
+          var titles = {
+            1: "Langkah 1: Kenyamanan Cicilan",
+            2: "Langkah 2: Rencana Jadwal Kunjungan",
+            3: "Langkah 3: Verifikasi Berkas & Kuota",
+          };
+          var currentStep = 1;
+
+          // ---- Template chat WhatsApp ----
+          function buildFormMessage(name, phone, installment, schedule) {
+            var lines = [
+              "Halo Admin Citra Griya Panjen,",
+              "",
+              "Saya ingin mengajukan kualifikasi KPR subsidi FLPP dan jadwal survei lokasi.",
+              "",
+              "*Data Saya*",
+              "Nama: " + name,
+            ];
+            if (phone) lines.push("No. WhatsApp: " + phone);
+            lines.push(
+              "Unit: Tipe 30/60 FLPP (Subsidi)",
+              "Angsuran: " + installment,
+              "Rencana survei: " + schedule,
+              "",
+              "Mohon info ketersediaan unit dan bantuan pendampingan berkas KPR. Terima kasih.",
+            );
+            return lines.join("\n");
+          }
+
+          var komersilMessage = [
+            "Halo Admin Citra Griya Panjen,",
+            "",
+            "Saya tertarik dengan Tipe 45/72 (Komersil) dan ingin konsultasi skema pembayarannya.",
+            "",
+            "Mohon info harga, ketersediaan unit, dan simulasi cicilan. Terima kasih.",
+          ].join("\n");
+
+          if (komersilBtn) komersilBtn.href = waUrl(komersilMessage);
+
+          // ---- State & tampilan ----
+          function getState() {
+            var checked = document.querySelector(
+              'input[name="wizard_installment"]:checked',
+            );
+            var sched = document.querySelector(
+              'input[name="wizard_schedule"]:checked',
+            );
+            return {
+              installment: checked
+                ? checked.value
+                : "Rp 1.073.571 /bln (20 Tahun)",
+              nominal: checked
+                ? checked.getAttribute("data-nominal") || ""
+                : "Rp 1.073.571 /bln",
+              schedule: sched ? sched.value : "Pekan Ini (1–7 Hari ke Depan)",
+              name: nameInput ? nameInput.value.trim() : "",
+              phone: waInput ? waInput.value.trim() : "",
+            };
+          }
+
+          function currentWaHref() {
+            var st = getState();
+            return waUrl(
+              buildFormMessage(
+                st.name || "(belum diisi)",
+                st.phone,
+                st.installment,
+                st.schedule,
+              ),
+            );
+          }
+
+          function update() {
+            var st = getState();
+            if (floatingInstallment)
+              floatingInstallment.textContent = st.nominal;
+            if (summaryInstallment)
+              summaryInstallment.textContent = st.installment;
+            if (summarySchedule) summarySchedule.textContent = st.schedule;
+            if (finalBtn) finalBtn.href = currentWaHref();
+
+            if (!floatingCta) return;
+            if (currentStep === 3) {
+              floatingText.textContent = "Kirim ke WhatsApp";
+              floatingIcon.textContent = "chat";
+              floatingCta.href = currentWaHref();
+              floatingCta.setAttribute("target", "_blank");
+              floatingCta.setAttribute("rel", "noopener");
+            } else {
+              floatingText.textContent = "Isi Form Kualifikasi";
+              floatingIcon.textContent = "arrow_downward";
+              floatingCta.href = "#form-kualifikasi";
+              floatingCta.removeAttribute("target");
+            }
+          }
+
+          function goTo(n) {
+            currentStep = n;
+            [1, 2, 3].forEach(function (i) {
+              if (steps[i]) steps[i].classList.toggle("hidden", i !== n);
+            });
+            if (progressBar) progressBar.style.width = (n / 3) * 100 + "%";
+            if (stepCount) stepCount.textContent = n + " dari 3";
+            if (stepTitle) stepTitle.textContent = titles[n];
+            update();
+            if (n === 3 && nameInput) nameInput.focus({ preventScroll: true });
+          }
+
+          // Validasi nama sebelum membuka WhatsApp
+          function guardSubmit(e) {
+            if (getState().name) return;
+            e.preventDefault();
+            if (nameError) nameError.classList.remove("hidden");
+            if (nameInput) {
+              nameInput.classList.add("border-red-500");
+              nameInput.focus();
+            }
+          }
+
+          $("btn-wizard-step1-next") &&
+            $("btn-wizard-step1-next").addEventListener("click", function () {
+              goTo(2);
+            });
+          $("btn-wizard-step2-prev") &&
+            $("btn-wizard-step2-prev").addEventListener("click", function () {
+              goTo(1);
+            });
+          $("btn-wizard-step2-next") &&
+            $("btn-wizard-step2-next").addEventListener("click", function () {
+              goTo(3);
+            });
+          $("btn-wizard-step3-prev") &&
+            $("btn-wizard-step3-prev").addEventListener("click", function () {
+              goTo(2);
+            });
+
+          if (finalBtn) finalBtn.addEventListener("click", guardSubmit);
+          if (floatingCta)
+            floatingCta.addEventListener("click", function (e) {
+              if (currentStep === 3) guardSubmit(e);
+            });
+
+          if (nameInput)
+            nameInput.addEventListener("input", function () {
+              if (nameError) nameError.classList.add("hidden");
+              nameInput.classList.remove("border-red-500");
+              update();
+            });
+          if (waInput) waInput.addEventListener("input", update);
+          document
+            .querySelectorAll(
+              'input[name="wizard_installment"], input[name="wizard_schedule"]',
+            )
+            .forEach(function (el) {
+              el.addEventListener("change", update);
+            });
+
+          update();
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initApp);
         } else {
-          floatingBtnText.textContent = "Isi Form Kualifikasi";
-          floatingBtnIcon.textContent = "arrow_downward";
-          floatingActionCta.href = "#form-kualifikasi";
-          floatingActionCta.removeAttribute('target');
+          initApp();
         }
-      }
-
-      function updateDynamicValues() {
-        const checkedRadio = document.querySelector('input[name="wizard_installment"]:checked');
-        const chosenInstallment = checkedRadio ? checkedRadio.value : 'Rp 1.073.571 /bln (20 Tahun)';
-        const chosenNominal = checkedRadio ? (checkedRadio.getAttribute('data-nominal') || 'Rp 1.073.571 /bln') : 'Rp 1.073.571 /bln';
-        const chosenSchedule = document.querySelector('input[name="wizard_schedule"]:checked')?.value || 'Pekan Ini (1–7 Hari ke Depan)';
-        const name = (nameInput && nameInput.value.trim()) || 'Calon Penghuni';
-        const phone = (waInput && waInput.value.trim()) || '-';
-
-        // Update Floating Bottom Bar
-        if (floatingInstallment) {
-          floatingInstallment.textContent = chosenNominal;
-        }
-
-        // Update Step 3 Summary
-        if (summaryInstallment) summaryInstallment.textContent = chosenInstallment;
-        if (summarySchedule) summarySchedule.textContent = chosenSchedule;
-
-        // Update WhatsApp Final Message
-        if (finalBtn) {
-          const message = `Halo Citra Griya Panjen, saya mengajukan verifikasi kualifikasi mandiri & jadwal survei unit subsidi FLPP.%0A%0A*Nama:* ${encodeURIComponent(name)}%0A*No WhatsApp:* ${encodeURIComponent(phone)}%0A*Pilihan Angsuran:* ${encodeURIComponent(chosenInstallment)}%0A*Rencana Jadwal Survei:* ${encodeURIComponent(chosenSchedule)}%0A%0AMohon dicek kuota unit dan dibantu pendampingan berkas KPR bank rekanan (BTN/Mandiri/BRI/BSI). Terima kasih!`;
-          finalBtn.href = `https://wa.me/?text=${message}`;
-        }
-        updateBottomBarState();
-      }
-
-      // Step 1 to 2
-      if (next1) {
-        next1.addEventListener('click', () => {
-          step1.classList.add('hidden');
-          step2.classList.remove('hidden');
-          currentStep = 2;
-          if (progressBar) progressBar.style.width = '66.66%';
-          if (stepCount) stepCount.textContent = '2 dari 3';
-          if (stepTitle) stepTitle.textContent = 'Langkah 2: Rencana Jadwal Kunjungan';
-          updateDynamicValues();
-        });
-      }
-
-      // Step 2 to 1
-      if (prev2) {
-        prev2.addEventListener('click', () => {
-          step2.classList.add('hidden');
-          step1.classList.remove('hidden');
-          currentStep = 1;
-          if (progressBar) progressBar.style.width = '33.33%';
-          if (stepCount) stepCount.textContent = '1 dari 3';
-          if (stepTitle) stepTitle.textContent = 'Langkah 1: Kenyamanan Cicilan';
-          updateDynamicValues();
-        });
-      }
-
-      // Step 2 to 3
-      if (next2) {
-        next2.addEventListener('click', () => {
-          step2.classList.add('hidden');
-          step3.classList.remove('hidden');
-          currentStep = 3;
-          if (progressBar) progressBar.style.width = '100%';
-          if (stepCount) stepCount.textContent = '3 dari 3';
-          if (stepTitle) stepTitle.textContent = 'Langkah 3: Verifikasi Berkas & Kuota';
-          updateDynamicValues();
-          if (nameInput) nameInput.focus();
-        });
-      }
-
-      // Step 3 to 2
-      if (prev3) {
-        prev3.addEventListener('click', () => {
-          step3.classList.add('hidden');
-          step2.classList.remove('hidden');
-          currentStep = 2;
-          if (progressBar) progressBar.style.width = '66.66%';
-          if (stepCount) stepCount.textContent = '2 dari 3';
-          if (stepTitle) stepTitle.textContent = 'Langkah 2: Rencana Jadwal Kunjungan';
-          updateDynamicValues();
-        });
-      }
-
-      if (nameInput) nameInput.addEventListener('input', updateDynamicValues);
-      if (waInput) waInput.addEventListener('input', updateDynamicValues);
-
-      document.querySelectorAll('input[name="wizard_installment"]').forEach(el => {
-        el.addEventListener('change', updateDynamicValues);
-      });
-      document.querySelectorAll('input[name="wizard_schedule"]').forEach(el => {
-        el.addEventListener('change', updateDynamicValues);
-      });
-
-      // Initialize
-      updateDynamicValues();
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initApp);
-    } else {
-      initApp();
-    }
-  })();
-</script>
-</body></html>
+      })();
+    </script>
+  </body>
+</html>
